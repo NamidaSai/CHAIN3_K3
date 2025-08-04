@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class SpawnTest : MonoBehaviour
+namespace Prototyping
 {
-    public void MoveTo(Transform target)
+    public class SpawnTest : MonoBehaviour
     {
-        transform.position = target.position;
+        public void MoveTo(Transform target)
+        {
+            transform.position = target.position;
+        }
     }
 }
