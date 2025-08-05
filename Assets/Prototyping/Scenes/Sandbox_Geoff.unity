@@ -664,6 +664,7 @@ GameObject:
   - component: {fileID: 1672159240}
   - component: {fileID: 1672159239}
   - component: {fileID: 1672159241}
+  - component: {fileID: 1672159242}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -717,6 +718,33 @@ MonoBehaviour:
   onReturn:
     m_PersistentCalls:
       m_Calls: []
+  onHover:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1672159242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672159237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc1067ac39a82044b7e4ef1a20eb790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactSystem: {fileID: 1672159241}
+  hotspot: {x: 1, y: 1}
+  cursorMode: 0
+  defaultSetting:
+    texture: {fileID: 2800000, guid: c361c9b588ec2444a8e3610264e62591, type: 3}
+    cooldown: 0
+  hoverSetting:
+    texture: {fileID: 2800000, guid: 83bc960c4fc5b4045b8ee7a053ae1222, type: 3}
+    cooldown: 0.01
+  interactSetting:
+    texture: {fileID: 2800000, guid: c9beb8414de2d29499a02cecede76caa, type: 3}
+    cooldown: 0.2
 --- !u!1 &1778935508
 GameObject:
   m_ObjectHideFlags: 0
