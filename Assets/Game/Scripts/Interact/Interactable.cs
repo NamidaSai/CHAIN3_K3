@@ -18,23 +18,14 @@ namespace Game.Interact
         {
             if (interactCamera == null) { return; }
             interactCamera.gameObject.SetActive(false);
-            animationHandler.onInteractEnd.AddListener(HandleInteractEnd);
-        }
-
-        private void OnDestroy()
-        {
-            animationHandler.onInteractEnd.RemoveListener(HandleInteractEnd);
-        }
-
-        private void HandleInteractEnd()
-        {
-            onInteract?.Invoke();
         }
 
         public void Interact(InteractSystem interactor)
         {
             if (_isInteracted) { return; }
 
+            onInteract?.Invoke();
+            
             interactor.onInteract.AddListener(HandleInteract);
             interactor.onReturn.AddListener(HandleReturn);
 
