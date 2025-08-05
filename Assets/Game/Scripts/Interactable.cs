@@ -13,8 +13,8 @@ namespace Game
 
         private void Awake()
         {
-            if (interactCamera != null)
-                interactCamera.gameObject.SetActive(false);
+            if (interactCamera == null) { return; }
+            interactCamera.gameObject.SetActive(false);
         }
 
         public void Interact(InteractSystem interactor)
