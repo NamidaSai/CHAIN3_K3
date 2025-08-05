@@ -20,7 +20,9 @@ namespace Game
 
         private void HandleQuit(InputAction.CallbackContext context)
         {
+#if UNITY_EDITOR
             Debug.Log("Quit");
+#endif
             QuitGame();
         }
         

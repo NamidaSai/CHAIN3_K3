@@ -15,9 +15,12 @@ namespace Game
         [Header("Custom Settings")]
         [SerializeField] private CursorSetting hoverSetting;
         [SerializeField] private CursorSetting interactSetting;
+        [SerializeField] private CursorSetting exitHoverSetting;
+        [SerializeField] private CursorSetting exitInteractSetting;
 
         private bool _isInCooldown = false;
         private bool _isHovering = false;
+        private bool _isHoveringExit = false;
         private float _cooldownTimer = Mathf.Infinity;
 
         private void Awake()
@@ -25,7 +28,7 @@ namespace Game
             SetCursor(defaultSetting.texture);
 
             interactSystem.onInteract.AddListener(HandleInteract);
-            interactSystem.onHoverEnter.AddListener(_ => HandleHoverEnter());
+            interactSystem.onHoverEnter.AddListener(HandleHoverEnter);
             interactSystem.onHoverExit.AddListener(_ => HandleHoverExit());
         }
 
@@ -38,20 +41,36 @@ namespace Game
             _isInCooldown = false;
             _cooldownTimer = Mathf.Infinity;
 
-            SetCursor(_isHovering ? hoverSetting.texture : defaultSetting.texture);
+            if (_isHovering)
+            {
+                SetCursor(_isHoveringExit ? exitHoverSetting.texture : hoverSetting.texture);
+            }
+            else
+            {
+                SetCursor(defaultSetting.texture);
+            }
         }
 
         private void HandleInteract(InteractSystem _)
         {
-            SetCursor(interactSetting.texture);
+            SetCursor(_isHoveringExit ? exitInteractSetting.texture : interactSetting.texture);
             _isInCooldown = true;
             _cooldownTimer = 0f;
         }
 
-        private void HandleHoverEnter()
+        private void HandleHoverEnter(Interactable interactable)
         {
             _isHovering = true;
             if (_isInCooldown) { return; }
+
+            if (interactable.GetComponent<Exit>())
+            {
+                _isHoveringExit = true;
+                SetCursor(exitHoverSetting.texture);
+                return;
+            }
+            
+            _isHoveringExit = false;
             SetCursor(hoverSetting.texture);
         }
 

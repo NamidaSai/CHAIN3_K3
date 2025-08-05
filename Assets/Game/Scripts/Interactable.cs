@@ -1,5 +1,7 @@
+using System;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game
 {
@@ -11,10 +13,23 @@ namespace Game
         private bool _isHovered = false;
         private bool _isInteracted = false;
 
+        public UnityEvent onInteract;
+
         private void Awake()
         {
             if (interactCamera == null) { return; }
             interactCamera.gameObject.SetActive(false);
+            animationHandler.onInteractEnd.AddListener(HandleInteractEnd);
+        }
+
+        private void OnDestroy()
+        {
+            animationHandler.onInteractEnd.RemoveListener(HandleInteractEnd);
+        }
+
+        private void HandleInteractEnd()
+        {
+            onInteract?.Invoke();
         }
 
         public void Interact(InteractSystem interactor)
@@ -33,6 +48,22 @@ namespace Game
             _isInteracted = true;
         }
 
+        public void OnHoverEnter(InteractSystem interactor)
+        {
+            if (_isHovered) { return; }
+
+            animationHandler?.SetTrigger("hoverStart");
+            _isHovered = true;
+        }
+
+        public void OnHoverExit(InteractSystem interactor)
+        {
+            if (!_isHovered) { return; }
+
+            animationHandler?.SetTrigger("hoverEnd");
+            _isHovered = false;
+        }
+        
         private void HandleInteract(InteractSystem interactor)
         {
             interactor.onInteract.RemoveListener(HandleInteract);
@@ -57,22 +88,6 @@ namespace Game
 
             animationHandler?.SetTrigger("default");
             _isInteracted = false;
-        }
-
-        public void OnHoverEnter(InteractSystem interactor)
-        {
-            if (_isHovered) { return; }
-
-            animationHandler?.SetTrigger("hoverStart");
-            _isHovered = true;
-        }
-
-        public void OnHoverExit(InteractSystem interactor)
-        {
-            if (!_isHovered) { return; }
-
-            animationHandler?.SetTrigger("hoverEnd");
-            _isHovered = false;
         }
     }
 }
