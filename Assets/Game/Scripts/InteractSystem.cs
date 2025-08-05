@@ -42,22 +42,21 @@ namespace Game
         {
             Interactable newHover = GetInteractableUnderCursor();
 
-            if (newHover != _currentHovered)
+            if (newHover == _currentHovered) { return; }
+            
+            if (_currentHovered)
             {
-                if (_currentHovered != null)
-                {
-                    onHoverExit?.Invoke(_currentHovered);
-                    _currentHovered.OnHoverExit(this);
-                }
-
-                if (newHover != null)
-                {
-                    onHoverEnter?.Invoke(newHover);
-                    newHover.OnHoverEnter(this);
-                }
-
-                _currentHovered = newHover;
+                onHoverExit?.Invoke(_currentHovered);
+                _currentHovered.OnHoverExit(this);
             }
+
+            if (newHover)
+            {
+                onHoverEnter?.Invoke(newHover);
+                newHover.OnHoverEnter(this);
+            }
+
+            _currentHovered = newHover;
         }
 
         private void HandleInteract(InputAction.CallbackContext context)
@@ -83,16 +82,12 @@ namespace Game
         {
             Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-            if (Physics.Raycast(ray, out RaycastHit hit, maxInteractDistance))
-            {
-                GameObject obj = hit.collider.gameObject;
-                if (obj.CompareTag("Interactable"))
-                {
-                    return obj.GetComponent<Interactable>();
-                }
-            }
-
-            return null;
+            if (!Physics.Raycast(ray, out RaycastHit hit, maxInteractDistance)) { return null; }
+            
+            GameObject hitObject = hit.collider.gameObject;
+            return hitObject.CompareTag("Interactable") 
+                ? hitObject.GetComponent<Interactable>() 
+                : null;
         }
     }
 }

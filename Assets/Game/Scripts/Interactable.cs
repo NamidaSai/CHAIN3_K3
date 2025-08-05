@@ -19,13 +19,15 @@ namespace Game
 
         public void Interact(InteractSystem interactor)
         {
-            if (_isInteracted) return;
+            if (_isInteracted) { return; }
 
             interactor.onInteract.AddListener(HandleInteract);
             interactor.onReturn.AddListener(HandleReturn);
 
             if (interactCamera != null)
+            {
                 interactCamera.gameObject.SetActive(true);
+            }
 
             animationHandler?.SetTrigger("interact");
             _isInteracted = true;
@@ -36,7 +38,9 @@ namespace Game
             interactor.onInteract.RemoveListener(HandleInteract);
 
             if (interactCamera != null)
+            {
                 interactCamera.gameObject.SetActive(false);
+            }
 
             animationHandler?.SetTrigger("default");
             _isInteracted = false;
@@ -47,7 +51,9 @@ namespace Game
             interactor.onReturn.RemoveListener(HandleReturn);
 
             if (interactCamera != null)
+            {
                 interactCamera.gameObject.SetActive(false);
+            }
 
             animationHandler?.SetTrigger("default");
             _isInteracted = false;
@@ -55,7 +61,7 @@ namespace Game
 
         public void OnHoverEnter(InteractSystem interactor)
         {
-            if (_isHovered) return;
+            if (_isHovered) { return; }
 
             animationHandler?.SetTrigger("hoverStart");
             _isHovered = true;
@@ -63,7 +69,7 @@ namespace Game
 
         public void OnHoverExit(InteractSystem interactor)
         {
-            if (!_isHovered) return;
+            if (!_isHovered) { return; }
 
             animationHandler?.SetTrigger("hoverEnd");
             _isHovered = false;
