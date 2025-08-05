@@ -61,8 +61,8 @@ namespace Game.Interact
 
         private void HandleInteract(InputAction.CallbackContext context)
         {
-            if (_currentHovered != null)
-                Interact(_currentHovered);
+            if (_currentHovered == null) { return; }
+            Interact(_currentHovered);
         }
 
         private void HandleReturn(InputAction.CallbackContext context)
