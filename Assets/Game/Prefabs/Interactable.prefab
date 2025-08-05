@@ -154,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2497854428210452930}
   - component: {fileID: 241782634822489235}
-  - component: {fileID: 1036077203827255933}
+  - component: {fileID: 690482294649678070}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Interactable
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactCamera: {fileID: 5071979759019182871}
   animationHandler: {fileID: 8674655824050642847}
---- !u!65 &1036077203827255933
+--- !u!65 &690482294649678070
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,7 +212,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.25, y: 0.5, z: 1.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7705266950193679861
 GameObject:

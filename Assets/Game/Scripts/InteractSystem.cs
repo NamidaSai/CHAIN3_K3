@@ -1,4 +1,5 @@
-﻿using Unity.Cinemachine;
+﻿using System;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -18,6 +19,9 @@ namespace Game
         [HideInInspector]
         public UnityEvent<InteractSystem> onReturn;
 
+        [HideInInspector]
+        public UnityEvent onHover;
+
 
         private void Awake()
         {
@@ -30,6 +34,12 @@ namespace Game
             _returnAction.performed += HandleReturn;
         }
 
+        private void Update()
+        {
+            if (!IsHoveringInteractable(out _)) { return; }
+            onHover?.Invoke();
+        }
+
         private void HandleInteract(InputAction.CallbackContext context)
         {
             TryInteract();
@@ -37,15 +47,20 @@ namespace Game
 
         private void TryInteract()
         {
+            if (!IsHoveringInteractable(out GameObject target)) { return; }
+            Interact(target);
+        }
+
+        private bool IsHoveringInteractable(out GameObject target)
+        {
+            target = null;
             Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-            if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity)) { return; }
+            if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity)) { return false; }
 
-            GameObject target = hit.collider.gameObject;
+            target = hit.collider.gameObject;
 
-            if (!target.CompareTag("Interactable")) { return; }
-
-            Interact(target);
+            return target.CompareTag("Interactable");
         }
 
         private void Interact(GameObject target)
