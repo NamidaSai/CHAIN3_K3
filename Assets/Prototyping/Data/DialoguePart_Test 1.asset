@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: DialoguePart_Test 1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Player's talking
+  - text: Is that... Slater?
     character: 0
     soundID: 
     animationTrigger: 
-  - text: Slater's talking
+  - text: Yes, it is I, Slater
     character: 1
     soundID: 
     animationTrigger: 
   choices:
-  - text: What?
+  - text: Okay...
     nextPart: {fileID: 11400000, guid: cdfec9b41f4906d4086b278de708df42, type: 2}
     flagsToCreate: []

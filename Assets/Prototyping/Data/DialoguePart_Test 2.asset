@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: DialoguePart_Test 2
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Slater's talking
+  - text: Does that surprise you?
     character: 1
     soundID: 
     animationTrigger: 
-  - text: Player's talking
+  - text: Well, kinda, yeah.
     character: 0
     soundID: 
     animationTrigger: 

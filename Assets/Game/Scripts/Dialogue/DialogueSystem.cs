@@ -13,6 +13,10 @@ namespace Game.Dialogue
 
         [HideInInspector]
         public UnityEvent<DialogueLine> onPlayLine;
+        [HideInInspector]
+        public UnityEvent onDialogueStart;
+        [HideInInspector]
+        public UnityEvent onDialogueEnd;
 
         private void Awake()
         {
@@ -30,6 +34,8 @@ namespace Game.Dialogue
 #if UNITY_EDITOR
             Debug.Log($"{nameof(DialogueSystem)}.{nameof(StartDialogue)} called.");
 #endif
+            onDialogueStart?.Invoke();
+            
             _currentDialogue = dialoguePart;
             _currentLineIndex = 0;
             
@@ -58,6 +64,7 @@ namespace Game.Dialogue
 #if UNITY_EDITOR
             Debug.Log($"{nameof(DialogueSystem)}.{nameof(EndDialogue)} called.");
 #endif            
+            onDialogueEnd?.Invoke();
             
             if (_currentDialogue.choices.Count > 0)
             {
