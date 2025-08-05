@@ -1,5 +1,4 @@
-﻿using System;
-using Unity.Cinemachine;
+﻿using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -9,24 +8,23 @@ namespace Game
     public class InteractSystem : MonoBehaviour
     {
         [SerializeField] private CinemachineCamera primaryCamera;
+        [SerializeField] private float maxInteractDistance = 5f;
 
         private Camera _mainCamera;
         private InputAction _interactAction;
         private InputAction _returnAction;
-        
-        [HideInInspector]
-        public UnityEvent<InteractSystem> onInteract;
-        [HideInInspector]
-        public UnityEvent<InteractSystem> onReturn;
 
-        [HideInInspector]
-        public UnityEvent onHover;
+        [HideInInspector] public UnityEvent<InteractSystem> onInteract;
+        [HideInInspector] public UnityEvent<InteractSystem> onReturn;
+        [HideInInspector] public UnityEvent<Interactable> onHoverEnter;
+        [HideInInspector] public UnityEvent<Interactable> onHoverExit;
 
+        private Interactable _currentHovered;
 
         private void Awake()
         {
             _mainCamera = Camera.main;
-            
+
             _interactAction = InputSystem.actions.FindAction("Interact");
             _returnAction = InputSystem.actions.FindAction("Return");
 
@@ -34,55 +32,67 @@ namespace Game
             _returnAction.performed += HandleReturn;
         }
 
+        private void OnDestroy()
+        {
+            _interactAction.performed -= HandleInteract;
+            _returnAction.performed -= HandleReturn;
+        }
+
         private void Update()
         {
-            if (!IsHoveringInteractable(out _)) { return; }
-            onHover?.Invoke();
+            Interactable newHover = GetInteractableUnderCursor();
+
+            if (newHover != _currentHovered)
+            {
+                if (_currentHovered != null)
+                {
+                    onHoverExit?.Invoke(_currentHovered);
+                    _currentHovered.OnHoverExit(this);
+                }
+
+                if (newHover != null)
+                {
+                    onHoverEnter?.Invoke(newHover);
+                    newHover.OnHoverEnter(this);
+                }
+
+                _currentHovered = newHover;
+            }
         }
 
         private void HandleInteract(InputAction.CallbackContext context)
         {
-            TryInteract();
-        }
-
-        private void TryInteract()
-        {
-            if (!IsHoveringInteractable(out GameObject target)) { return; }
-            Interact(target);
-        }
-
-        private bool IsHoveringInteractable(out GameObject target)
-        {
-            target = null;
-            Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-
-            if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity)) { return false; }
-
-            target = hit.collider.gameObject;
-
-            return target.CompareTag("Interactable");
-        }
-
-        private void Interact(GameObject target)
-        {
-            onInteract?.Invoke(this);
-            
-            Interactable interactable = target.GetComponent<Interactable>();
-            if (interactable != null)
-            {
-                interactable.Interact(this); // or pass context
-                primaryCamera.gameObject.SetActive(false);
-            }
-            else
-            {
-                Debug.LogWarning($"'{target.name}' is tagged Interactable but has no Interactable component.");
-            }
+            if (_currentHovered != null)
+                Interact(_currentHovered);
         }
 
         private void HandleReturn(InputAction.CallbackContext context)
         {
             onReturn?.Invoke(this);
             primaryCamera.gameObject.SetActive(true);
+        }
+
+        private void Interact(Interactable target)
+        {
+            onInteract?.Invoke(this);
+            target.Interact(this);
+            primaryCamera.gameObject.SetActive(false);
+        }
+
+        private Interactable GetInteractableUnderCursor()
+        {
+            Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+
+            if (Physics.Raycast(ray, out RaycastHit hit, maxInteractDistance))
+            {
+                GameObject obj = hit.collider.gameObject;
+                if (obj.CompareTag("Interactable"))
+                {
+                    return obj.GetComponent<Interactable>();
+                }
+            }
+
+            return null;
         }
     }
 }

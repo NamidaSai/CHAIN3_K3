@@ -8,31 +8,66 @@ namespace Game
         [SerializeField] private CinemachineCamera interactCamera;
         [SerializeField] private AnimationHandler animationHandler;
 
+        private bool _isHovered = false;
+        private bool _isInteracted = false;
+
         private void Awake()
         {
-            interactCamera.gameObject.SetActive(false);
+            if (interactCamera != null)
+                interactCamera.gameObject.SetActive(false);
         }
 
         public void Interact(InteractSystem interactor)
         {
+            if (_isInteracted) return;
+
             interactor.onInteract.AddListener(HandleInteract);
             interactor.onReturn.AddListener(HandleReturn);
-            interactCamera.gameObject.SetActive(true);
-            animationHandler.SetTrigger("interact");
+
+            if (interactCamera != null)
+                interactCamera.gameObject.SetActive(true);
+
+            animationHandler?.SetTrigger("interact");
+            _isInteracted = true;
         }
 
         private void HandleInteract(InteractSystem interactor)
         {
             interactor.onInteract.RemoveListener(HandleInteract);
-            interactCamera.gameObject.SetActive(false);
-            animationHandler.SetTrigger("default");
+
+            if (interactCamera != null)
+                interactCamera.gameObject.SetActive(false);
+
+            animationHandler?.SetTrigger("default");
+            _isInteracted = false;
         }
 
         private void HandleReturn(InteractSystem interactor)
         {
             interactor.onReturn.RemoveListener(HandleReturn);
-            interactCamera.gameObject.SetActive(false);
-            animationHandler.SetTrigger("default");
+
+            if (interactCamera != null)
+                interactCamera.gameObject.SetActive(false);
+
+            animationHandler?.SetTrigger("default");
+            _isInteracted = false;
+        }
+
+        public void OnHoverEnter(InteractSystem interactor)
+        {
+            if (_isHovered) return;
+
+            animationHandler?.SetTrigger("hoverStart");
+            _isHovered = true;
+        }
+
+        public void OnHoverExit(InteractSystem interactor)
+        {
+            if (!_isHovered) return;
+
+            animationHandler?.SetTrigger("hoverEnd");
+            _isHovered = false;
         }
     }
 }
+
