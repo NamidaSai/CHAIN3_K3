@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace Game
+namespace Game.Interact
 {
     public class AnimationHandler : MonoBehaviour
     {

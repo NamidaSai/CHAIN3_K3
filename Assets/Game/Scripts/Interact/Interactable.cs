@@ -1,9 +1,8 @@
-using System;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Game
+namespace Game.Interact
 {
     public class Interactable : MonoBehaviour
     {

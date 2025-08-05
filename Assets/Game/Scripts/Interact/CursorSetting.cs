@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Game
+namespace Game.Interact
 {
     [System.Serializable]
     public struct CursorSetting

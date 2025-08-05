@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-namespace Game
+namespace Game.Interact
 {
     public class InteractSystem : MonoBehaviour
     {
