@@ -45,13 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continueChoice:
-    text: '[continue]'
+    text: <i>continue</i>
     nextPart: {fileID: 0}
-    flagsToCreate: []
+    flagRequired: 
+    flagToCreate: 
   closeChoice:
-    text: '[close]'
+    text: <i>close</i>
     nextPart: {fileID: 0}
-    flagsToCreate: []
+    flagRequired: 
+    flagToCreate: 
   onPlayLine:
     m_PersistentCalls:
       m_Calls: []
