@@ -302,7 +302,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7072046332402165521, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
   m_PrefabInstance: {fileID: 361498319869140093}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &811360953
+--- !u!114 &811360957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -314,8 +314,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade6078d718f4a2a80a8afcff4cc992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueToPlay: {fileID: 11400000, guid: fc505f23d4f347d439a4d0abb43f21da, type: 2}
   isRepeatable: 1
+--- !u!114 &811360958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811360949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea2ce4822bb41e2900913bc5a5a9dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePairs:
+  - dialogue: {fileID: 11400000, guid: bbcfaeec5d6026048b6f1cdf5932f2fa, type: 2}
+    flag: K3_Secret
+  - dialogue: {fileID: 11400000, guid: fc505f23d4f347d439a4d0abb43f21da, type: 2}
+    flag: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +662,7 @@ PrefabInstance:
     - target: {fileID: 241782634822489235, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 811360953}
+      objectReference: {fileID: 811360957}
     - target: {fileID: 241782634822489235, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -713,7 +729,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7072046332402165521, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 811360953}
+      addedObject: {fileID: 811360958}
+    - targetCorrespondingSourceObject: {fileID: 7072046332402165521, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 811360957}
   m_SourcePrefab: {fileID: 100100000, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
 --- !u!1001 &5552125029773394031
 PrefabInstance:
