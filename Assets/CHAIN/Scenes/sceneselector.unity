@@ -266,7 +266,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
       propertyPath: _defaultScene
-      value: Sandbox_Geoff
+      value: MainGame
       objectReference: {fileID: 0}
     - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
       propertyPath: _doorScenes.Array.size
