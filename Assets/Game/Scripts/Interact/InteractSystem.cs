@@ -81,7 +81,8 @@ namespace Game.Interact
         private void HandleDialogueStart()
         {
             CanInteract = false;
-            
+
+            if (_currentHovered == null) { return; }
             onHoverExit?.Invoke(_currentHovered);
             _currentHovered.OnHoverExit(this);
             _currentHovered = null;
