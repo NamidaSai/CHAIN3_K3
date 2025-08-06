@@ -34,17 +34,22 @@ namespace Game.Dialogue
             Instance = this;
         }
 
-        public void HandleChoiceMade(Choice choiceMade)
+        public void HandleChoiceMade(Choice choice)
         {
-            if (choiceMade.text == continueChoice.text)
+            if (!string.IsNullOrEmpty(choice.flagToCreate))
+            {
+                CHAIN_SharedData.CreateFlag(choice.flagToCreate);
+            }
+            
+            if (choice.text == continueChoice.text)
             {
                 ProcessDialogue();
                 return;
             }
             
-            if (choiceMade.nextPart)
+            if (choice.nextPart)
             {
-                StartDialogue(choiceMade.nextPart);
+                StartDialogue(choice.nextPart);
                 return;
             }
             
@@ -101,6 +106,11 @@ namespace Game.Dialogue
             onPlayLine?.Invoke(lineToPlay);
             _currentLineIndex++;
 
+            DisplayChoices();
+        }
+
+        private void DisplayChoices()
+        {
             bool isLastLine = _currentLineIndex == _currentDialogue.dialogueLines.Count;
             if (!isLastLine)
             {

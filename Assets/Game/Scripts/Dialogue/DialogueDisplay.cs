@@ -56,6 +56,12 @@ namespace Game.Dialogue
             
             foreach (Choice choice in choicesToDisplay)
             {
+                if (!string.IsNullOrEmpty(choice.flagRequired)
+                    && !CHAIN_SharedData.DoesFlagExist(choice.flagRequired))
+                {
+                    continue;
+                }
+                
                 GameObject newChoiceObject = Instantiate(choicePrefab, choiceContainer);
                 _currentChoices.Add(newChoiceObject);
                 ChoiceDisplay newChoiceDisplay = newChoiceObject.GetComponent<ChoiceDisplay>();

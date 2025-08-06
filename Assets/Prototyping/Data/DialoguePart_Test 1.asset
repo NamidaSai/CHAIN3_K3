@@ -24,4 +24,9 @@ MonoBehaviour:
   choices:
   - text: Okay...
     nextPart: {fileID: 11400000, guid: cdfec9b41f4906d4086b278de708df42, type: 2}
-    flagsToCreate: []
+    flagRequired: 
+    flagToCreate: 
+  - text: You really had to see this twice?
+    nextPart: {fileID: 11400000, guid: cdfec9b41f4906d4086b278de708df42, type: 2}
+    flagRequired: K3_Test
+    flagToCreate: 

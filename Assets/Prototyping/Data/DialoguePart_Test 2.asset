@@ -20,7 +20,9 @@ MonoBehaviour:
   choices:
   - text: Well, kinda, yeah
     nextPart: {fileID: 0}
-    flagsToCreate: []
+    flagRequired: 
+    flagToCreate: K3_Test
   - text: Not really
     nextPart: {fileID: 0}
-    flagsToCreate: []
+    flagRequired: 
+    flagToCreate: K3_Test
