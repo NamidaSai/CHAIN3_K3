@@ -394,6 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueToPlay: {fileID: 11400000, guid: fc505f23d4f347d439a4d0abb43f21da, type: 2}
+  isRepeatable: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
