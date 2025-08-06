@@ -12,7 +12,6 @@ namespace Game.Dialogue
         {
             if (_wasTriggered)
             {
-                DialogueSystem.Instance.ProcessDialogue();
                 return;
             }
             

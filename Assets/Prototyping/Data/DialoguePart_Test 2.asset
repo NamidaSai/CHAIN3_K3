@@ -17,8 +17,10 @@ MonoBehaviour:
     character: 1
     soundID: 
     animationTrigger: 
-  - text: Well, kinda, yeah.
-    character: 0
-    soundID: 
-    animationTrigger: 
-  choices: []
+  choices:
+  - text: Well, kinda, yeah
+    nextPart: {fileID: 0}
+    flagsToCreate: []
+  - text: Not really
+    nextPart: {fileID: 0}
+    flagsToCreate: []

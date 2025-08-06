@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: DialoguePart_Test 1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Is that... Slater?
+  - text: <i>Is that... Slater?</i>
     character: 0
     soundID: 
     animationTrigger: 
-  - text: Yes, it is I, Slater
+  - text: Yes, it is I, <b>Slater</b>
     character: 1
     soundID: 
     animationTrigger: 

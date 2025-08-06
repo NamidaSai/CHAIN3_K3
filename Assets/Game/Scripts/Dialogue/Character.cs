@@ -3,7 +3,7 @@
     [System.Serializable]
     public enum Character
     {
-        Player,
-        Slater
+        Me,
+        Them
     }
 }

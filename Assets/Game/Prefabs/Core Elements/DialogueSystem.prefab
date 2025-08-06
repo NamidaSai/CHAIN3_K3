@@ -44,7 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e26d931c4b744f780620e3ee4b09abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  continueChoice:
+    text: '[continue]'
+    nextPart: {fileID: 0}
+    flagsToCreate: []
+  closeChoice:
+    text: '[close]'
+    nextPart: {fileID: 0}
+    flagsToCreate: []
   onPlayLine:
+    m_PersistentCalls:
+      m_Calls: []
+  onDisplayChoices:
     m_PersistentCalls:
       m_Calls: []
   onDialogueStart:

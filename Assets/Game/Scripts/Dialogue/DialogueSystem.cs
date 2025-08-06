@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,12 +7,17 @@ namespace Game.Dialogue
     public class DialogueSystem : MonoBehaviour
     {
         public static DialogueSystem Instance;
+
+        [SerializeField] private Choice continueChoice;
+        [SerializeField] private Choice closeChoice;
         
         private DialoguePart _currentDialogue;
         private int _currentLineIndex = 0;
 
         [HideInInspector]
         public UnityEvent<DialogueLine> onPlayLine;
+        [HideInInspector] 
+        public UnityEvent<List<Choice>> onDisplayChoices;
         [HideInInspector]
         public UnityEvent onDialogueStart;
         [HideInInspector]
@@ -27,6 +32,23 @@ namespace Game.Dialogue
             }
             
             Instance = this;
+        }
+
+        public void HandleChoiceMade(Choice choiceMade)
+        {
+            if (choiceMade.text == continueChoice.text)
+            {
+                ProcessDialogue();
+                return;
+            }
+            
+            if (choiceMade.nextPart)
+            {
+                StartDialogue(choiceMade.nextPart);
+                return;
+            }
+            
+            EndDialogue();
         }
 
         public void StartDialogue(DialoguePart dialoguePart)
@@ -52,7 +74,7 @@ namespace Game.Dialogue
 
             if (_currentLineIndex < _currentDialogue.dialogueLines.Count)
             {
-                PlayNextDialogueLine(_currentDialogue);
+                PlayNextDialogueLine();
                 return;
             }
 
@@ -65,19 +87,12 @@ namespace Game.Dialogue
             Debug.Log($"{nameof(DialogueSystem)}.{nameof(EndDialogue)} called.");
 #endif            
             onDialogueEnd?.Invoke();
-            
-            if (_currentDialogue.choices.Count > 0)
-            {
-                StartDialogue(_currentDialogue.choices[0].nextPart);
-                return;
-            }
-            
             _currentDialogue = null;
         }
 
-        private void PlayNextDialogueLine(DialoguePart dialoguePart)
+        private void PlayNextDialogueLine()
         {
-            DialogueLine lineToPlay = dialoguePart.dialogueLines[_currentLineIndex];
+            DialogueLine lineToPlay = _currentDialogue.dialogueLines[_currentLineIndex];
             
 #if UNITY_EDITOR
             Debug.Log($"{nameof(DialogueSystem)}.{nameof(PlayNextDialogueLine)}: {lineToPlay.text}.");
@@ -85,6 +100,21 @@ namespace Game.Dialogue
             
             onPlayLine?.Invoke(lineToPlay);
             _currentLineIndex++;
+
+            bool isLastLine = _currentLineIndex == _currentDialogue.dialogueLines.Count;
+            if (!isLastLine)
+            {
+                onDisplayChoices?.Invoke(new List<Choice> { continueChoice });
+                return;
+            }
+            
+            bool dialogueHasChoices = _currentDialogue.choices.Count > 0;
+            onDisplayChoices?.Invoke
+            (
+                dialogueHasChoices 
+                    ? _currentDialogue.choices 
+                    : new List<Choice> {closeChoice}
+            );
         }
     }
 }
