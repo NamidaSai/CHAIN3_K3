@@ -1,5 +1,4 @@
-﻿using System;
-using Game.Dialogue;
+﻿using Game.Dialogue;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
