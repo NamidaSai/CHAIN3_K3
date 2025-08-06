@@ -84,4 +84,5 @@ crashlytics-build.properties
 Assets/Gitingnore.meta
 
 # CHAIN Data
-/[Aa]ssets/[Ss]treamingAssets/shareddata*
+/[Aa]ssets/[Ss]treamingAssets/*.data*
+/[Aa]ssets/[Ss]treamingAssets/*.door*
