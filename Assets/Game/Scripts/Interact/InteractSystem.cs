@@ -1,4 +1,6 @@
-﻿using Unity.Cinemachine;
+﻿using System;
+using Game.Dialogue;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -51,10 +53,44 @@ namespace Game.Interact
             _returnAction.performed += HandleReturn;
         }
 
+        private void Start()
+        {
+            if (DialogueSystem.Instance == null)
+            {
+                Debug.LogError($"{nameof(InteractSystem)}.{nameof(Start)}: Dialogue System not found.");
+                return;
+            }
+            
+            DialogueSystem.Instance.onDialogueStart.AddListener(HandleDialogueStart);
+            DialogueSystem.Instance.onDialogueEnd.AddListener(HandleDialogueEnd);
+        }
+
         private void OnDestroy()
         {
             _interactAction.performed -= HandleInteract;
             _returnAction.performed -= HandleReturn;
+            
+            if (DialogueSystem.Instance == null)
+            {
+                return;
+            }
+            
+            DialogueSystem.Instance.onDialogueStart.RemoveListener(HandleDialogueStart);
+            DialogueSystem.Instance.onDialogueEnd.RemoveListener(HandleDialogueEnd);
+        }
+
+        private void HandleDialogueStart()
+        {
+            CanInteract = false;
+            
+            onHoverExit?.Invoke(_currentHovered);
+            _currentHovered.OnHoverExit(this);
+            _currentHovered = null;
+        }
+
+        private void HandleDialogueEnd()
+        {
+            CanInteract = true;
         }
 
         private void Update()
@@ -62,7 +98,6 @@ namespace Game.Interact
             if (!CanInteract) { return; }
             
             Interactable newHover = GetInteractableUnderCursor();
-
             if (newHover == _currentHovered) { return; }
             
             if (_currentHovered)
