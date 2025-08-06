@@ -7,8 +7,12 @@ namespace Game.Interact
 {
     public class InteractSystem : MonoBehaviour
     {
+        public static InteractSystem Instance;
+        
         [SerializeField] private CinemachineCamera primaryCamera;
         [SerializeField] private float maxInteractDistance = 5f;
+        
+        public bool CanInteract { private get; set; } = true;
 
         private Camera _mainCamera;
         private InputAction _interactAction;
@@ -20,9 +24,24 @@ namespace Game.Interact
         [HideInInspector] public UnityEvent<Interactable> onHoverExit;
 
         private Interactable _currentHovered;
+        
+        public void Return()
+        {
+            onReturn?.Invoke(this);
+            primaryCamera.gameObject.SetActive(true);
+        }
+
 
         private void Awake()
         {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Instance = this;
+            
             _mainCamera = Camera.main;
 
             _interactAction = InputSystem.actions.FindAction("Interact");
@@ -40,6 +59,8 @@ namespace Game.Interact
 
         private void Update()
         {
+            if (!CanInteract) { return; }
+            
             Interactable newHover = GetInteractableUnderCursor();
 
             if (newHover == _currentHovered) { return; }
@@ -67,8 +88,7 @@ namespace Game.Interact
 
         private void HandleReturn(InputAction.CallbackContext context)
         {
-            onReturn?.Invoke(this);
-            primaryCamera.gameObject.SetActive(true);
+            Return();
         }
 
         private void Interact(Interactable target)

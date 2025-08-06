@@ -12,6 +12,8 @@ namespace Game.Interact
         private bool _isHovered = false;
         private bool _isInteracted = false;
 
+        public bool CanBeInteractedWith { private get; set; } = true;
+
         public UnityEvent onInteract;
 
         private void Awake()
@@ -22,6 +24,8 @@ namespace Game.Interact
 
         public void Interact(InteractSystem interactor)
         {
+            if (!CanBeInteractedWith) { return; }
+            
             if (_isInteracted) { return; }
 
             onInteract?.Invoke();
@@ -40,6 +44,7 @@ namespace Game.Interact
 
         public void OnHoverEnter(InteractSystem interactor)
         {
+            if (!CanBeInteractedWith) { return; }
             if (_isHovered) { return; }
 
             animationHandler?.SetTrigger("hoverStart");
@@ -48,11 +53,17 @@ namespace Game.Interact
 
         public void OnHoverExit(InteractSystem interactor)
         {
+            if (!CanBeInteractedWith) { return; }
             if (!_isHovered) { return; }
 
             animationHandler?.SetTrigger("hoverEnd");
             _isHovered = false;
         }
+
+        public void ActivateCamera(bool active)
+        {
+            interactCamera.gameObject.SetActive(active);
+        }       
         
         private void HandleInteract(InteractSystem interactor)
         {
