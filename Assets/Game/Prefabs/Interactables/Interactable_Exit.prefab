@@ -119,6 +119,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7072046332402165521, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1152197063084198278}
+    - targetCorrespondingSourceObject: {fileID: 7072046332402165521, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2279467259692320838}
+    - targetCorrespondingSourceObject: {fileID: 7072046332402165521, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4736286111211417786}
+    - targetCorrespondingSourceObject: {fileID: 7072046332402165521, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 263471929373789374}
   m_SourcePrefab: {fileID: 100100000, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
 --- !u!1 &7567500457382955024 stripped
 GameObject:
@@ -142,3 +151,60 @@ MonoBehaviour:
   onExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2279467259692320838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567500457382955024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867631df3291609408af42c76a105c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoorID: J4
+  _onSpawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 263471929373789374}
+        m_TargetAssemblyTypeName: Game.Dialogue.DialogueTrigger, Assembly-CSharp
+        m_MethodName: HandleSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4736286111211417786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567500457382955024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea2ce4822bb41e2900913bc5a5a9dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePairs:
+  - dialogue: {fileID: 11400000, guid: 5478a8766a8a4634a8eb36222ba225c1, type: 2}
+    flag: 
+--- !u!114 &263471929373789374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567500457382955024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade6078d718f4a2a80a8afcff4cc992a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRepeatable: 0
+  spawnDelay: 1
