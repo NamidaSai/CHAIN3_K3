@@ -268,42 +268,6 @@ PrefabInstance:
       propertyPath: _defaultScene
       value: MainGame
       objectReference: {fileID: 0}
-    - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
-      propertyPath: _doorScenes.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
-      propertyPath: _doorScenes.Array.data[0].doorID
-      value: L4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
-      propertyPath: _doorScenes.Array.data[1].doorID
-      value: J4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
-      propertyPath: _doorScenes.Array.data[2].doorID
-      value: A4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
-      propertyPath: _doorScenes.Array.data[3].doorID
-      value: A4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
-      propertyPath: _doorScenes.Array.data[0].sceneName
-      value: Sandbox_Geoff
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
-      propertyPath: _doorScenes.Array.data[1].sceneName
-      value: Sandbox_Geoff
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
-      propertyPath: _doorScenes.Array.data[2].sceneName
-      value: chamber
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362415913015275636, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
-      propertyPath: _doorScenes.Array.data[3].sceneName
-      value: chamber
-      objectReference: {fileID: 0}
     - target: {fileID: 7320995798720411823, guid: 56085fb8f34d028478f0022a1a853c9d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
