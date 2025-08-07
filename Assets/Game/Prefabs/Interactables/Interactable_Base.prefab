@@ -193,6 +193,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactCamera: {fileID: 5071979759019182871}
   animationHandler: {fileID: 8674655824050642847}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &690482294649678070
 BoxCollider:
   m_ObjectHideFlags: 0
