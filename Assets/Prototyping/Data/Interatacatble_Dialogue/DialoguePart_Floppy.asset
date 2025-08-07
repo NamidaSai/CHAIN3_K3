@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a8f9465ac184801b114af67a47ea777, type: 3}
-  m_Name: 
+  m_Name: DialoguePart_Floppy
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: <i>Is that... Slater?</i>
+  - text: A floppy disk...
     character: 0
     soundID: 
     animationTrigger: 
-  - text: Yes, it is I, <b>Slater</b>
-    character: 1
+  - text: There's something scrawled on it...
+    character: 0
     soundID: 
     animationTrigger: 
-  choices:
-  - text: Okay...
-    nextPart: {fileID: 11400000, guid: cdfec9b41f4906d4086b278de708df42, type: 2}
-    flagRequired: 
-    flagToCreate: 
-  - text: You really had to see this twice?
-    nextPart: {fileID: 11400000, guid: cdfec9b41f4906d4086b278de708df42, type: 2}
-    flagRequired: K3_Test
-    flagToCreate: K3_Secret
+  - text: '"80.50.33.32"'
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: These are coordinates...
+    character: 0
+    soundID: 
+    animationTrigger: 
+  choices: []
