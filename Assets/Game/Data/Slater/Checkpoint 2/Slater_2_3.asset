@@ -17,11 +17,8 @@ MonoBehaviour:
     character: 1
     soundID: 
     animationTrigger: 
-  - text: '"I genuinely can''t tell if you''re pulling my leg"'
-    character: 1
-    soundID: 
-    animationTrigger: 
-  - text: '"or having a stroke right now, Harper."'
+  - text: '"I genuinely can''t tell if you''re pulling my leg or having a stroke
+      right now, Harper."'
     character: 1
     soundID: 
     animationTrigger: 
