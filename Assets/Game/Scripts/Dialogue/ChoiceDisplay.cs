@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ namespace Game.Dialogue
     {
         [SerializeField] private TMP_Text choiceText;
         [SerializeField] private Button choiceButton;
+        [SerializeField] private CanvasGroup canvasGroup;
 
         private Choice _choice;
 
@@ -15,6 +17,13 @@ namespace Game.Dialogue
         {
             _choice = choice;
             choiceText.text = choice.text;
+            canvasGroup.alpha = 0f;
+        }
+
+        public void Show()
+        {
+            canvasGroup.interactable = true;
+            canvasGroup.DOFade(1f, 0.3f);
         }
 
         private void Awake()

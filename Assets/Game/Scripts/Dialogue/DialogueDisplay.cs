@@ -25,6 +25,14 @@ namespace Game.Dialogue
         
         private const float TweenDuration = 0.5f;
 
+        public void HandleTypewriterEnd()
+        {
+            foreach (GameObject choice in _currentChoices)
+            {
+                choice.GetComponent<ChoiceDisplay>().Show();
+            }
+        }
+
         // Dialogue System is initialised in Awake()
         private void Start()
         {

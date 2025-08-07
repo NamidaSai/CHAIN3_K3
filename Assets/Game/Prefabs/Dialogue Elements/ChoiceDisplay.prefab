@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2782790110283188807}
   - component: {fileID: 686217513693681539}
   - component: {fileID: 1988645296502511540}
+  - component: {fileID: -7923601734431279065}
   m_Layer: 5
   m_Name: ChoiceDisplay
   m_TagString: Untagged
@@ -62,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choiceText: {fileID: 232327934050192562}
   choiceButton: {fileID: 1988645296502511540}
+  canvasGroup: {fileID: -7923601734431279065}
 --- !u!114 &686217513693681539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +119,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.05, g: 0.05, b: 0.05, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.02, g: 0.02, b: 0.02, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.019607844, g: 0.019607844, b: 0.019607844, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -136,6 +138,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &-7923601734431279065
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005746147701995317}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7615280150870071552
 GameObject:
   m_ObjectHideFlags: 0
