@@ -117,12 +117,24 @@ namespace Game.Dialogue
                 onDisplayChoices?.Invoke(new List<Choice> { continueChoice });
                 return;
             }
+
+            List<Choice> choicesToDisplay = new();
+            foreach (Choice choice in _currentDialogue.choices)
+            {
+                if (!string.IsNullOrEmpty(choice.flagRequired)
+                    && !CHAIN_SharedData.DoesFlagExist(choice.flagRequired))
+                {
+                    continue;
+                }
+
+                choicesToDisplay.Add(choice);
+            }
             
-            bool dialogueHasChoices = _currentDialogue.choices.Count > 0;
+            bool dialogueHasChoices = choicesToDisplay.Count > 0;
             onDisplayChoices?.Invoke
             (
                 dialogueHasChoices 
-                    ? _currentDialogue.choices 
+                    ? choicesToDisplay
                     : new List<Choice> {closeChoice}
             );
         }
