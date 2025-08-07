@@ -1,4 +1,4 @@
-﻿%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
@@ -37,10 +37,10 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"We?"'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: a91f593a66aac2d45ab3eae084ed5ca5, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"What horrendous act?"'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: c430fed8ecba10f469816c02c3ccc51f, type: 2}
     flagRequired: 
     flagToCreate: 

@@ -27,7 +27,7 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"You''re an arrogant prick."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 015132d7e4946c64e81bc192b2379f2e, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"..."'
