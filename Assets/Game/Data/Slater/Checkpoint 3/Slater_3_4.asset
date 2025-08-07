@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8f9465ac184801b114af67a47ea777, type: 3}
+  m_Name: Slater_3_4
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: '"Yes, we. We work together."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"You''ve been helping me gather intelligence for months.'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"You knew this was the next step."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: <i>(This... This is the 'Vector' case...)</i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(Shit...)</i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  choices:
+  - text: <i>close</i>
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: K3_Checkpoint_3

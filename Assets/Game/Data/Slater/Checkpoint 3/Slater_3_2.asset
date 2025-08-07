@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8f9465ac184801b114af67a47ea777, type: 3}
+  m_Name: Slater_3_2
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: '"Oh - now you''re my therapist?"'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"Of course I feel horrible. But we have no choice!"'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"The attacker will only be picked up after an attack has happened."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"This is the first time we have ever had the opportunity to catch someone
+      directly connected to this operation."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"Let me be very clear: I know innocent people are going to die - I know
+      that."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"But if we intervene now, their coms go dark, and we''re back where we
+      started, just like the last 3 times."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: <i>(Shit... This is the 'Vector' case.)</i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: '"We can make this the last time such an act is committed."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  choices:
+  - text: <i>(How was I such an idiot?)</i>
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: K3_Checkpoint_3
