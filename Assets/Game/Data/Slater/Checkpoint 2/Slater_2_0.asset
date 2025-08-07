@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8f9465ac184801b114af67a47ea777, type: 3}
+  m_Name: Slater_2_0
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: '"This room... This is my office..."'
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: '"Is that a threat? You''re coming for my title too?"'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"And you call me corrupt. Jesus Christ."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  choices:
+  - text: '"What are you talking about?"'
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: 
+  - text: '"I''m not threatening you."'
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: 
+  - text: '"Your title? Who are you?"'
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: 

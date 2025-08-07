@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/CHAIN/Scenes/sceneselector.unity
     guid: c8cf468c3c4e59541954ed6988ad2d56
   - enabled: 1
-    path: Assets/Prototyping/Scenes/Sandbox_Geoff.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Game/Scenes/MainGame.unity
+    guid: d2f5c3a04944d3c4e8e0782cf22cef8b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
