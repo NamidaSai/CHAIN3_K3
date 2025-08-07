@@ -186,6 +186,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialoguePairs:
+  - dialogue: {fileID: 11400000, guid: 922158f1237101445b266165c2161086, type: 2}
+    flag: K3_Checkpoint_4
+  - dialogue: {fileID: 11400000, guid: 955d233c8c524e34ea48e51c6be54214, type: 2}
+    flag: K3_Checkpoint_3
   - dialogue: {fileID: 11400000, guid: 38ef301e59b50bb4d8f325c09129686a, type: 2}
     flag: K3_Checkpoint_2
   - dialogue: {fileID: 11400000, guid: 1a5da51d3ad869a459f2daba310266c5, type: 2}
