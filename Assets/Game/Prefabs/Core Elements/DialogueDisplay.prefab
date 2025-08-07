@@ -186,6 +186,7 @@ MonoBehaviour:
   lineDisplay: {fileID: 7140940299332527547}
   choiceContainer: {fileID: 8253190741651476875}
   choicePrefab: {fileID: 5005746147701995317, guid: aaeb0b9e1ea7d0b47b30221d2820d95e, type: 3}
+  canvasGroup: {fileID: 2822447783980160881}
   debugContainer: {fileID: 6982185935543459124}
   debugDisplay: {fileID: 6354483083343096768}
   showDebug: 1
@@ -1003,6 +1004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8253190741651476875}
   - component: {fileID: 3434019555616037282}
+  - component: {fileID: 2822447783980160881}
   m_Layer: 5
   m_Name: ChoiceContainer
   m_TagString: Untagged
@@ -1029,7 +1031,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -75, y: 75}
-  m_SizeDelta: {x: 800, y: 600}
+  m_SizeDelta: {x: 800, y: 350}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &3434019555616037282
 MonoBehaviour:
@@ -1057,6 +1059,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!225 &2822447783980160881
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920415601976174654}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7982602988497780441
 GameObject:
   m_ObjectHideFlags: 0

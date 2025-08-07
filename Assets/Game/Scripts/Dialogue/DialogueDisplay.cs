@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -11,12 +13,17 @@ namespace Game.Dialogue
         [SerializeField] private TMP_Text lineDisplay;
         [SerializeField] private RectTransform choiceContainer;
         [SerializeField] private GameObject choicePrefab;
+        [SerializeField] private CanvasGroup canvasGroup;
         
         [SerializeField] private RectTransform debugContainer;
         [SerializeField] private TMP_Text debugDisplay;
         [SerializeField] private bool showDebug = true;
 
         private readonly List<GameObject> _currentChoices = new();
+
+        private float _startAnchoredY;
+        
+        private const float TweenDuration = 0.5f;
 
         // Dialogue System is initialised in Awake()
         private void Start()
@@ -27,7 +34,9 @@ namespace Game.Dialogue
             DialogueSystem.Instance.onDialogueEnd.AddListener(HandleEndDialogue);
             
             canvas.gameObject.SetActive(false);
-            
+            _startAnchoredY = choiceContainer.anchoredPosition.y;
+            canvasGroup.alpha = 0f;
+
 #if !UNITY_EDITOR
             debugContainer.gameObject.SetActive(false);
 #endif
@@ -50,7 +59,15 @@ namespace Game.Dialogue
 
         private void HandleStartDialogue()
         {
-            canvas.gameObject.SetActive(true);
+            if (!canvas.gameObject.activeSelf)
+            {
+                canvas.gameObject.SetActive(true);
+                choiceContainer.anchoredPosition = new Vector2(choiceContainer.anchoredPosition.x, _startAnchoredY);
+                choiceContainer.DOAnchorPosY(10f, TweenDuration)
+                    .From()
+                    .SetEase(Ease.OutSine);
+                canvasGroup.DOFade(1f, TweenDuration);
+            }
             
 #if UNITY_EDITOR
             debugDisplay.text = DialogueSystem.Instance.GetCurrentDialoguePart();
@@ -59,6 +76,15 @@ namespace Game.Dialogue
 
         private void HandleEndDialogue()
         {
+            StartCoroutine(DisableAfterDelay());
+        }
+
+        private IEnumerator DisableAfterDelay()
+        {
+            choiceContainer.DOAnchorPosY(10f, TweenDuration)
+                .SetEase(Ease.OutSine);
+            canvasGroup.DOFade(0f, TweenDuration);
+            yield return new WaitForSeconds(TweenDuration);
             canvas.gameObject.SetActive(false);
         }
 
