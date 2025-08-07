@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8f9465ac184801b114af67a47ea777, type: 3}
+  m_Name: Slater_1_5
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: '"Maybe a more appropriate question is..."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"Why are you still here?"'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  choices:
+  - text: '"What? I don''t understand."'
+    nextPart: {fileID: 11400000, guid: df9c8321afcd8a6408a9c89a9f8cee40, type: 2}
+    flagRequired: 
+    flagToCreate: 
+  - text: '"I''ve only just arrived."'
+    nextPart: {fileID: 11400000, guid: 02c97e45ad274b34294e6c8ffe292395, type: 2}
+    flagRequired: 
+    flagToCreate: 
