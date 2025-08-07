@@ -41,15 +41,15 @@ namespace Game.Dialogue
                 CHAIN_SharedData.CreateFlag(choice.flagToCreate);
             }
             
-            if (choice.text == continueChoice.text)
-            {
-                ProcessDialogue();
-                return;
-            }
-            
             if (choice.nextPart)
             {
                 StartDialogue(choice.nextPart);
+                return;
+            }
+            
+            if (choice.text == continueChoice.text)
+            {
+                ProcessDialogue();
                 return;
             }
             
