@@ -61,10 +61,10 @@ namespace Game.Dialogue
 #if UNITY_EDITOR
             Debug.Log($"{nameof(DialogueSystem)}.{nameof(StartDialogue)} called.");
 #endif
-            onDialogueStart?.Invoke();
-            
             _currentDialogue = dialoguePart;
             _currentLineIndex = 0;
+            
+            onDialogueStart?.Invoke();
             
             ProcessDialogue();
         }
@@ -138,5 +138,12 @@ namespace Game.Dialogue
                     : new List<Choice> {closeChoice}
             );
         }
+
+#if UNITY_EDITOR
+        public string GetCurrentDialoguePart()
+        {
+            return _currentDialogue?.name;
+        }
+#endif
     }
 }

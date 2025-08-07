@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +12,10 @@ namespace Game.Dialogue
         [SerializeField] private TMP_Text lineDisplay;
         [SerializeField] private RectTransform choiceContainer;
         [SerializeField] private GameObject choicePrefab;
+        
+        [SerializeField] private RectTransform debugContainer;
+        [SerializeField] private TMP_Text debugDisplay;
+        [SerializeField] private bool showDebug = true;
 
         private readonly List<GameObject> _currentChoices = new();
 
@@ -23,8 +28,19 @@ namespace Game.Dialogue
             DialogueSystem.Instance.onDialogueEnd.AddListener(HandleEndDialogue);
             
             canvas.gameObject.SetActive(false);
+            
+#if !UNITY_EDITOR
+            debugContainer.gameObject.SetActive(false);
+#endif
         }
 
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            debugContainer.gameObject.SetActive(showDebug);
+        }
+#endif
+        
         private void OnDestroy()
         {
             DialogueSystem.Instance.onPlayLine.RemoveListener(HandlePlayLine);
@@ -36,6 +52,10 @@ namespace Game.Dialogue
         private void HandleStartDialogue()
         {
             canvas.gameObject.SetActive(true);
+            
+#if UNITY_EDITOR
+            debugDisplay.text = DialogueSystem.Instance.GetCurrentDialoguePart();
+#endif
         }
 
         private void HandleEndDialogue()
