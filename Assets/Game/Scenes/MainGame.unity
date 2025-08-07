@@ -1029,6 +1029,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4736286111211417786, guid: ce4c46cb4a4080445b359ffb7f272897, type: 3}
+      propertyPath: dialoguePairs.Array.data[0].flag
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7567500457382955024, guid: ce4c46cb4a4080445b359ffb7f272897, type: 3}
       propertyPath: m_Name
       value: Interactable_Camera
@@ -1247,6 +1251,26 @@ PrefabInstance:
     - target: {fileID: 7515413098177078422, guid: bcffa9ea093c2dd47be340e717e105b5, type: 3}
       propertyPath: m_Name
       value: CinemachineCamera_Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677771705197801455, guid: bcffa9ea093c2dd47be340e717e105b5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677771705197801455, guid: bcffa9ea093c2dd47be340e717e105b5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677771705197801455, guid: bcffa9ea093c2dd47be340e717e105b5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677771705197801455, guid: bcffa9ea093c2dd47be340e717e105b5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677771705197801455, guid: bcffa9ea093c2dd47be340e717e105b5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -25,4 +25,8 @@ MonoBehaviour:
     character: 0
     soundID: 
     animationTrigger: 
-  choices: []
+  choices:
+  - text: <i>close<i>
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: K3_Progress_1
