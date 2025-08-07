@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: targetDoorId
+      value: L4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279467259692320838, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: DoorID
+      value: L4
+      objectReference: {fileID: 0}
     - target: {fileID: 2993755103021463235, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4231515
@@ -48,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4736286111211417786, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: dialoguePairs.Array.data[0].dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: ed7a29696d5de3c4c9b953a5400e37dd, type: 2}
     - target: {fileID: 7567500457382955024, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
       propertyPath: m_Name
       value: Interactable_Exit_L4
