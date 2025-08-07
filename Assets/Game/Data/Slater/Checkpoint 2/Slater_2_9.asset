@@ -21,8 +21,12 @@ MonoBehaviour:
     character: 0
     soundID: 
     animationTrigger: 
+  - text: '"..."'
+    character: 1
+    soundID: 
+    animationTrigger: 
   choices:
   - text: '"Slater?"'
     nextPart: {fileID: 0}
-    flagRequired: K3_Realisation_2
+    flagRequired: K3_Progress_2
     flagToCreate: 
