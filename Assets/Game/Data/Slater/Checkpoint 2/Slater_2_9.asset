@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slater_2_9
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: <i>(That man is... me?)</i>
+  - text: <i>(That's... me?)</i>
     character: 0
     soundID: 
     animationTrigger: 
