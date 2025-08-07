@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8f9465ac184801b114af67a47ea777, type: 3}
+  m_Name: Slater_4_0
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: <i>Slater explains the case, his position, how he now regrets it...</i>
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: <i>(I remember this. Operation 'Vector').<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(A terrorist group, coordinating shootings around the country.<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(Every time we got close to catching them, they'd vanish.)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(But, I found their pattern. I knew exactly where and when the handler.)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(All I had to do was wait for the attack to happen.)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(Even if it lead to the death of 53 people.)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(...)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(I caught my suspect, but it was useless. He was also a pawn.)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(The real network stayed hidden.)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(All those people - dead... For what? A handful of phone numbers and
+      one arrest?)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(I convinced myself there was no other way. There probably was.)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(Maybe my intel did help save lives.)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(People continued to die anyway.)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(I've got to live with that decision now.)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: '"Oh god, please don''t tell me you''re gonna cry."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"It''s not going to make me feel worse. I think that''s genuinely impossible."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  choices:
+  - text: <i>close</i>
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: K3_Checkpoint_4
