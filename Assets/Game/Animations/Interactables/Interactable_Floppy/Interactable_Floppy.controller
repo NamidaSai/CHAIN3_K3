@@ -61,7 +61,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 3560545242491351486}
-    m_Position: {x: 330, y: 110, z: 0}
+    m_Position: {x: 330, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4449090256530797555}
     m_Position: {x: 30, y: -80, z: 0}
@@ -154,7 +154,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d3735984ff641dc40969a9fffdc09d62, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8801e315a87d8c94abf4adefce73488d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -216,7 +216,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Interactable_J4
+  m_Name: Interactable_Floppy
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: default
@@ -277,7 +277,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f00441e6f78f3d64fa69bebd5b4ab066, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3c1d20181042c754e92312b6f38e97a2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -304,7 +304,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7348f1dcdc3e43347a0e8538b413c800, type: 2}
+  m_Motion: {fileID: 7400000, guid: 69607f0fab138d448be2e67ebe332101, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -331,7 +331,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f750c1e1b12b0c0459f6230315f64453, type: 2}
+  m_Motion: {fileID: 7400000, guid: d75685b5c0ca9d846b8c1cb3103b1d8c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
