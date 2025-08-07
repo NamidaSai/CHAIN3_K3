@@ -12,5 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8f9465ac184801b114af67a47ea777, type: 3}
   m_Name: Slater_3_6
   m_EditorClassIdentifier: 
-  dialogueLines: []
-  choices: []
+  dialogueLines:
+  - text: '"Wow. You''re actually starting to sound like me now."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"Sure, get it out of your system. Then leave me alone."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"Unless you decide to actually start acting like a detective - for once."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  choices:
+  - text: <i>close</i>
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: K3_Checkpoint_3

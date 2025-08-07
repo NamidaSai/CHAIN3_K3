@@ -12,5 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8f9465ac184801b114af67a47ea777, type: 3}
   m_Name: Slater_3_5
   m_EditorClassIdentifier: 
-  dialogueLines: []
-  choices: []
+  dialogueLines:
+  - text: '"Really?"'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"The attack. That horrendous act."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"The blood is on our hands. Your words, not mine."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: <i>(Shit.)</i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(This must be the 'Vector' case.)</i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  choices:
+  - text: <i>close</i>
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: K3_Checkpoint_3
