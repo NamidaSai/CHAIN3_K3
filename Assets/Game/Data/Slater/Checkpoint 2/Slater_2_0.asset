@@ -27,14 +27,14 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"What are you talking about?"'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 12e1c248c1b00934195538870a43b9d4, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"I''m not threatening you."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 25745c12f2bc60a439b34fd7372c6698, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"Your title? Who are you?"'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 76309c6ea1083064f871e9fa0ca892b3, type: 2}
     flagRequired: 
     flagToCreate: 

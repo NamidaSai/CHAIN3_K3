@@ -55,10 +55,10 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"Harper?"'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: cf60ac04bcd686f42b8d62528a2842a8, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"..."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 7351e2f138573fc46a601e47f42e82ad, type: 2}
     flagRequired: 
     flagToCreate: 

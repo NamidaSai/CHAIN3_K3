@@ -19,6 +19,6 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: <i>continue</i>
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 65453cd15b1961c4e954dd7517c9d265, type: 2}
     flagRequired: 
-    flagToCreate: 
+    flagToCreate: K3_Realisation_2

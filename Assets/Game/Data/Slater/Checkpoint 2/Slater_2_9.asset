@@ -12,5 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8f9465ac184801b114af67a47ea777, type: 3}
   m_Name: Slater_2_9
   m_EditorClassIdentifier: 
-  dialogueLines: []
-  choices: []
+  dialogueLines:
+  - text: <i>(That man is... me?)</i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(This is insane.)</i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  choices:
+  - text: '"Slater?"'
+    nextPart: {fileID: 0}
+    flagRequired: K3_Realisation_2
+    flagToCreate: 

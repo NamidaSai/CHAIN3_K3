@@ -19,14 +19,14 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"Why are you calling me that?"'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: cf60ac04bcd686f42b8d62528a2842a8, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"My name is Slater."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: c64d467e4adeacd44b9b9eecd861eb26, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"My name is Riley."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: e7bcfcd82359f5347b67a182da7f39ac, type: 2}
     flagRequired: J1_BecameRiley
     flagToCreate: 
