@@ -2094,10 +2094,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3996116033295420660, guid: 69a4055945b405e41baf3aa3fd292f69, type: 3}
-      propertyPath: delay
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5876435353020796258, guid: 69a4055945b405e41baf3aa3fd292f69, type: 3}
       propertyPath: m_Name
       value: Interactable_Exit_L4

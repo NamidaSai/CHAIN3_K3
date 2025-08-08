@@ -342,6 +342,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: delay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
       propertyPath: targetDoorId
       value: L4
       objectReference: {fileID: 0}
