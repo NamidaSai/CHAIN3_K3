@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1217186210777780492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5488288031961272358}
+  - component: {fileID: 4089591838599078329}
+  m_Layer: 0
+  m_Name: MusicPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5488288031961272358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217186210777780492}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4089591838599078329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217186210777780492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3edcaab129a402897991706c810967f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tracks:
+  - name: K3_Checkpoint_5
+    clip: {fileID: 8300000, guid: 29ae9be333ed87b448ed99e62c5f0b53, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitch: 0
+    loop: 1
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: K3_Checkpoint_4
+    clip: {fileID: 8300000, guid: 5f52c1737a21e534d8bc897e99bc9737, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitch: 0
+    loop: 1
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: K3_Checkpoint_3
+    clip: {fileID: 8300000, guid: 3af9bcb0b253f0b44949fb65d372fc56, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitch: 0
+    loop: 1
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: K3_Checkpoint_2
+    clip: {fileID: 8300000, guid: 535c6bc1b80efa84bbcb3ba9ce29bfd2, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitch: 0
+    loop: 1
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: K3_Checkpoint_1
+    clip: {fileID: 8300000, guid: 3d4fdc9492143434ca967f03c846309e, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitch: 0
+    loop: 1
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: start
+    clip: {fileID: 8300000, guid: 8b9358857a515d5488d459daa0de926d, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitch: 0
+    loop: 1
+    stopOnPause: 0
+    source: {fileID: 0}
+  startingTrack: start
+  decayRate: 3
