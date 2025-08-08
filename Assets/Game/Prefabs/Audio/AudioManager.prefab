@@ -55,7 +55,7 @@ MonoBehaviour:
     stopOnPause: 0
     source: {fileID: 0}
   - name: interact_default
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 0ef062ae8ebb9ed4f8e8036f91aee764, type: 3}
     volume: 1
     pitch: 1
     randomPitch: 1
