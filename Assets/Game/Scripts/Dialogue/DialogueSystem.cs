@@ -86,7 +86,7 @@ namespace Game.Dialogue
             EndDialogue();
         }
 
-        private void EndDialogue()
+        public void EndDialogue()
         {
 #if UNITY_EDITOR
             Debug.Log($"{nameof(DialogueSystem)}.{nameof(EndDialogue)} called.");
