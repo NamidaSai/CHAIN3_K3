@@ -1322,6 +1322,38 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &4523177855952925964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2046934082627401377}
+  m_Layer: 0
+  m_Name: Effects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2046934082627401377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4523177855952925964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4656805944733612028}
+  m_Father: {fileID: 8721497711985748}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4922661778393070673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,7 +1546,7 @@ Transform:
   - {fileID: 4774481470419157106}
   - {fileID: 5208168568671541524}
   - {fileID: 816111491082299918}
-  - {fileID: 4656805944733612028}
+  - {fileID: 2046934082627401377}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6456179335824769754
@@ -4494,8 +4526,16 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8721497711985748}
+    m_TransformParent: {fileID: 2046934082627401377}
     m_Modifications:
+    - target: {fileID: 4362453775912201975, guid: 38f2e6097d8e988408803d1448addb27, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.45199007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362453775912201975, guid: 38f2e6097d8e988408803d1448addb27, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45199007
+      objectReference: {fileID: 0}
     - target: {fileID: 4362453775912201975, guid: 38f2e6097d8e988408803d1448addb27, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
