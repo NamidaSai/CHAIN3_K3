@@ -17,10 +17,13 @@ namespace Game.Interact
         [SerializeField] private CursorSetting interactSetting;
         [SerializeField] private CursorSetting exitHoverSetting;
         [SerializeField] private CursorSetting exitInteractSetting;
+        [SerializeField] private CursorSetting talkHoverSetting;
+        [SerializeField] private CursorSetting talkInteractSetting;
 
         private bool _isInCooldown = false;
         private bool _isHovering = false;
         private bool _isHoveringExit = false;
+        private bool _isHoveringSlater = false;
         private float _cooldownTimer = Mathf.Infinity;
 
         private void Awake()
@@ -43,7 +46,18 @@ namespace Game.Interact
 
             if (_isHovering)
             {
-                SetCursor(_isHoveringExit ? exitHoverSetting.texture : hoverSetting.texture);
+                if (_isHoveringExit)
+                {
+                    SetCursor(exitHoverSetting.texture);
+                }
+                else if (_isHoveringSlater)
+                {
+                    SetCursor(talkHoverSetting.texture);
+                }
+                else
+                {
+                    SetCursor(hoverSetting.texture);
+                }
             }
             else
             {
@@ -53,7 +67,19 @@ namespace Game.Interact
 
         private void HandleInteract(InteractSystem _)
         {
-            SetCursor(_isHoveringExit ? exitInteractSetting.texture : interactSetting.texture);
+            if (_isHoveringExit)
+            {
+                SetCursor(exitInteractSetting.texture);
+            }
+            else if (_isHoveringSlater)
+            {
+                SetCursor(talkInteractSetting.texture);
+            }
+            else
+            {
+                SetCursor(interactSetting.texture);
+            }
+            
             _isInCooldown = true;
             _cooldownTimer = 0f;
         }
@@ -69,14 +95,22 @@ namespace Game.Interact
                 SetCursor(exitHoverSetting.texture);
                 return;
             }
-            
-            _isHoveringExit = false;
+
+            if (interactable.GetComponent<Slater>())
+            {
+                _isHoveringSlater = true;
+                SetCursor(talkHoverSetting.texture);
+                return;
+            }
+
             SetCursor(hoverSetting.texture);
         }
 
         private void HandleHoverExit()
         {
             _isHovering = false;
+            _isHoveringExit = false;
+            _isHoveringSlater = false;
             if (_isInCooldown) { return; }
             SetCursor(defaultSetting.texture);
         }

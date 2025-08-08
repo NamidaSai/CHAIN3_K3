@@ -62,3 +62,9 @@ MonoBehaviour:
   exitInteractSetting:
     texture: {fileID: 2800000, guid: 9ef062fa56e546a408a881443b41ab21, type: 3}
     cooldown: 1
+  talkHoverSetting:
+    texture: {fileID: 2800000, guid: 096a34948d9068649a4946941c04332f, type: 3}
+    cooldown: 0
+  talkInteractSetting:
+    texture: {fileID: 2800000, guid: 940f20ce05cffdc4697fc9879f570f89, type: 3}
+    cooldown: 1
