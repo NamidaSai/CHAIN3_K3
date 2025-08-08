@@ -143,6 +143,7 @@ namespace Game.Dialogue
 #endif
         public string GetCurrentSoundID()
         {
+            if (!_currentDialogue) { return null; }
             if (_currentLineIndex >= _currentDialogue.dialogueLines.Count) { return null; }
             return _currentDialogue.dialogueLines[_currentLineIndex].soundID;
         }
