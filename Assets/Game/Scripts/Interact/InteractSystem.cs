@@ -19,10 +19,10 @@ namespace Game.Interact
         private InputAction _interactAction;
         private InputAction _returnAction;
 
-        [HideInInspector] public UnityEvent<InteractSystem> onInteract;
-        [HideInInspector] public UnityEvent<InteractSystem> onReturn;
-        [HideInInspector] public UnityEvent<Interactable> onHoverEnter;
-        [HideInInspector] public UnityEvent<Interactable> onHoverExit;
+        public UnityEvent<InteractSystem> onInteract;
+        public UnityEvent<InteractSystem> onReturn;
+        public UnityEvent<Interactable> onHoverEnter;
+        public UnityEvent<Interactable> onHoverExit;
 
         private Interactable _currentHovered;
         

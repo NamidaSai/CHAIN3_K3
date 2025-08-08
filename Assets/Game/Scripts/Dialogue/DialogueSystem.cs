@@ -14,13 +14,9 @@ namespace Game.Dialogue
         private DialoguePart _currentDialogue;
         private int _currentLineIndex = 0;
 
-        [HideInInspector]
         public UnityEvent<DialogueLine> onPlayLine;
-        [HideInInspector] 
         public UnityEvent<List<Choice>> onDisplayChoices;
-        [HideInInspector]
         public UnityEvent onDialogueStart;
-        [HideInInspector]
         public UnityEvent onDialogueEnd;
 
         private void Awake()
