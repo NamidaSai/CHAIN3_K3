@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: DialoguePart_Floppy
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: A floppy disk...
+  - text: <i>(A floppy disk.)<i>
     character: 0
     soundID: 
     animationTrigger: 
-  - text: There's something scrawled on it...
+  - text: <i>(There's something scrawled on it...)<i>
     character: 0
     soundID: 
     animationTrigger: 
-  - text: '"80.50.33.32"'
+  - text: <i>('80.50.33.32')<i>
     character: 0
     soundID: 
     animationTrigger: 
-  - text: These are coordinates...
+  - text: <i>(These are coordinates...)<i>
     character: 0
     soundID: 
     animationTrigger: 

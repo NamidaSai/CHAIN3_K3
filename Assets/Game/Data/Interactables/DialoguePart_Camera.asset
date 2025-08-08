@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: DialoguePart_Camera
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: I have the exact same camera in my car.
+  - text: <i>(I have the exact same camera in my car.)<i>
     character: 0
     soundID: 
     animationTrigger: 
-  - text: It's even got a chip on the lens...
+  - text: <i>(It's even got a chip on the lens...)<i>
     character: 0
     soundID: 
     animationTrigger: 
-  - text: Yeah, no question. This is definitely my camera.
+  - text: <i>(Yeah, no question. This is definitely my camera.)<i>
     character: 0
     soundID: 
     animationTrigger: 

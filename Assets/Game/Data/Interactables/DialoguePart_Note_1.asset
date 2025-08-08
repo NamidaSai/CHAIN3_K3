@@ -13,16 +13,20 @@ MonoBehaviour:
   m_Name: DialoguePart_Note_1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: '"Pattern verified: 3rd Tuesday, high-traffic venues""'
+  - text: '<i>(''Pattern verified: 3rd Tuesday, high-traffic venue''.)<i>'
     character: 0
     soundID: 
     animationTrigger: 
-  - text: (This feels familiar...)
+  - text: <i>(This feels familiar...)<i>
     character: 0
     soundID: 
     animationTrigger: 
-  - text: Is this my handwriting?
+  - text: <i>(Is this my handwriting?)<i>
     character: 0
     soundID: 
     animationTrigger: 
-  choices: []
+  choices:
+  - text: <i>close<i>
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: 

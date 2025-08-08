@@ -21,7 +21,7 @@ MonoBehaviour:
     character: 0
     soundID: 
     animationTrigger: 
-  - text: <i>(Titled 'Phoenix Mall'.)<i>
+  - text: <i>(Titled 'Carter Mall'.)<i>
     character: 0
     soundID: 
     animationTrigger: 
@@ -29,11 +29,11 @@ MonoBehaviour:
     character: 0
     soundID: 
     animationTrigger: 
-  - text: <i>There seems to be a bunch of numbers... Estimates...<i>
+  - text: <i>There seems to be a bunch of numbers. Estimates...<i>
     character: 0
     soundID: 
     animationTrigger: 
-  - text: <i>These are... casualty numbers...<i>
+  - text: <i>These are... casualties.<i>
     character: 0
     soundID: 
     animationTrigger: 
@@ -49,4 +49,4 @@ MonoBehaviour:
   - text: <i>close<i>
     nextPart: {fileID: 0}
     flagRequired: 
-    flagToCreate: 
+    flagToCreate: K3_Progress_3

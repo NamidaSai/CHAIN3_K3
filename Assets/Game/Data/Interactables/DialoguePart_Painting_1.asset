@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialoguePart_Painting_1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: I remember this... I got it as a gift.
+  - text: <i>(I know this painting... I it was a gift.)<i>
     character: 0
     soundID: 
     animationTrigger: 
