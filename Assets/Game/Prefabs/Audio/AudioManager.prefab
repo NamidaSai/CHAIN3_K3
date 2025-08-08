@@ -54,3 +54,11 @@ MonoBehaviour:
     loop: 1
     stopOnPause: 0
     source: {fileID: 0}
+  - name: interact_default
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    randomPitch: 1
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}
