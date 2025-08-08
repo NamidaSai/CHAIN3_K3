@@ -20,6 +20,6 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: <i>continue</i>
-    nextPart: {fileID: 11400000, guid: 5520d2e630149a344bd11a7b21405da9, type: 2}
+    nextPart: {fileID: 11400000, guid: c09a72a10a655024589cab58db72fc54, type: 2}
     flagRequired: 
-    flagToCreate: K3_Checkpoint_5
+    flagToCreate: 
