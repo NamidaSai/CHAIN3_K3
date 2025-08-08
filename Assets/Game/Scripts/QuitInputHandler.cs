@@ -1,16 +1,20 @@
-﻿using UnityEngine;
+﻿using Game.Interact;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Game
 {
     public class QuitInputHandler : MonoBehaviour
     {
+        [SerializeField] private Canvas quitCanvas;
+        
         private InputAction _quitAction;
         
         private void Awake()
         {
             _quitAction = InputSystem.actions.FindAction("Quit");
             _quitAction.performed += HandleQuit;
+            quitCanvas.gameObject.SetActive(false);
         }
 
         private void OnDestroy()
@@ -23,10 +27,11 @@ namespace Game
 #if UNITY_EDITOR
             Debug.Log("Quit");
 #endif
-            QuitGame();
+            quitCanvas.gameObject.SetActive(!quitCanvas.gameObject.activeSelf);
+            InteractSystem.Instance.IsBlocked = !quitCanvas.gameObject.activeSelf;
         }
         
-        private void QuitGame()
+        public void QuitGame()
         {
             Application.Quit();
         }

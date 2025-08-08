@@ -17,6 +17,7 @@ namespace Game.Interact
         [SerializeField] private RectTransform returnRect;
         
         public bool CanInteract { private get; set; } = true;
+        public bool IsBlocked { private get; set; } = true;
 
         private Camera _mainCamera;
         private InputAction _interactAction;
@@ -33,6 +34,7 @@ namespace Game.Interact
         
         public void Return()
         {
+            if (!IsBlocked) { return; }
             onReturn?.Invoke(this);
             DialogueSystem.Instance.EndDialogue();
             primaryCamera.gameObject.SetActive(true);
@@ -107,6 +109,7 @@ namespace Game.Interact
 
         private void Update()
         {
+            if (!IsBlocked) { return; }
             if (!CanInteract) { return; }
             
             Interactable newHover = GetInteractableUnderCursor();
