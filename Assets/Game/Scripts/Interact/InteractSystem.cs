@@ -29,9 +29,9 @@ namespace Game.Interact
         public void Return()
         {
             onReturn?.Invoke(this);
+            DialogueSystem.Instance.EndDialogue();
             primaryCamera.gameObject.SetActive(true);
         }
-
 
         private void Awake()
         {

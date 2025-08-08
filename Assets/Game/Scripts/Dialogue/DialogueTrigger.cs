@@ -6,7 +6,6 @@ namespace Game.Dialogue
     [RequireComponent(typeof(DialogueSelector))]
     public class DialogueTrigger : MonoBehaviour
     {
-        [SerializeField] private bool isRepeatable = false;
         [SerializeField] private float spawnDelay = 1f;
 
         private DialogueSelector _dialogueSelector;
@@ -28,6 +27,12 @@ namespace Game.Dialogue
 
         private IEnumerator TriggerWithDelay()
         {
+            if (_wasTriggered)
+            {
+                yield break;
+            }
+            _wasTriggered = true;
+            
             yield return new WaitForSeconds(spawnDelay);
             Trigger();
         }
@@ -37,12 +42,7 @@ namespace Game.Dialogue
 #if UNITY_EDITOR
             Debug.Log($"{nameof(DialogueTrigger)} triggered");
 #endif
-            if (_wasTriggered)
-            {
-                return;
-            }
-            
-            _wasTriggered = true;
+
             DialoguePart dialogueToPlay = _dialogueSelector.SelectDialogueByFlag();
             DialogueSystem.Instance.StartDialogue(dialogueToPlay);
             DialogueSystem.Instance.onDialogueEnd.AddListener(HandleDialogueEnd);
@@ -50,7 +50,7 @@ namespace Game.Dialogue
 
         private void HandleDialogueEnd()
         {
-            _wasTriggered = !isRepeatable;
+            _wasTriggered = false;
             DialogueSystem.Instance.onDialogueEnd.RemoveListener(HandleDialogueEnd);
         }
     }
