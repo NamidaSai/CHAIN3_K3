@@ -47,7 +47,7 @@ MonoBehaviour:
   tracks:
   - name: K3_Checkpoint_5
     clip: {fileID: 8300000, guid: 29ae9be333ed87b448ed99e62c5f0b53, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     randomPitch: 0
     loop: 1
@@ -55,7 +55,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: K3_Checkpoint_4
     clip: {fileID: 8300000, guid: 5f52c1737a21e534d8bc897e99bc9737, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     randomPitch: 0
     loop: 1
@@ -63,7 +63,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: K3_Checkpoint_3
     clip: {fileID: 8300000, guid: 3af9bcb0b253f0b44949fb65d372fc56, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     randomPitch: 0
     loop: 1
@@ -79,7 +79,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: K3_Checkpoint_1
     clip: {fileID: 8300000, guid: 3d4fdc9492143434ca967f03c846309e, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     randomPitch: 0
     loop: 1
@@ -87,7 +87,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: start
     clip: {fileID: 8300000, guid: 8b9358857a515d5488d459daa0de926d, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     randomPitch: 0
     loop: 1

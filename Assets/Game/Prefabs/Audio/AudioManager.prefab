@@ -47,15 +47,15 @@ MonoBehaviour:
   startingSound: ambient
   sounds:
   - name: ambient
-    clip: {fileID: 0}
-    volume: 1
+    clip: {fileID: 8300000, guid: 3f60f95b4c4f9c74ab23a16e3497d619, type: 3}
+    volume: 0.4
     pitch: 1
     randomPitch: 0
     loop: 1
     stopOnPause: 0
     source: {fileID: 0}
   - name: interact_default
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 0ef062ae8ebb9ed4f8e8036f91aee764, type: 3}
     volume: 1
     pitch: 1
     randomPitch: 1
@@ -63,9 +63,9 @@ MonoBehaviour:
     stopOnPause: 0
     source: {fileID: 0}
   - name: typewriter_them
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 6e809f78ae05a6e47bcb59c9e7512456, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 0.71
     randomPitch: 1
     loop: 0
     stopOnPause: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
     stopOnPause: 0
     source: {fileID: 0}
   - name: typerwriter_thought
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 6e809f78ae05a6e47bcb59c9e7512456, type: 3}
     volume: 1
     pitch: 1
     randomPitch: 1
