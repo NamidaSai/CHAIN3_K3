@@ -15,11 +15,11 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Is that a threat? You''re coming for my title too?"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"And you call me twisted."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: '"What are you talking about?"'

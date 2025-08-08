@@ -15,11 +15,11 @@ MonoBehaviour:
   dialogueLines:
   - text: '"I''m done talking with you. You''ve already wasted hours of my time."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Go play pretend with someone else while I actually save lives."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: '"So that''s it?"'

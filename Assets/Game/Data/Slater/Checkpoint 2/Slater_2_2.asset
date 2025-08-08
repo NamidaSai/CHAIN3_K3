@@ -15,12 +15,12 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Sure you''re not."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"I''ve had to deal with other pompous, moralistic bootlickers before you,
       Harper.""'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>continue</i>

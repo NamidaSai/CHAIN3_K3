@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Slater_5_12
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: ...
+  - text: '"..."'
     character: 1
-    soundID: 
+    soundID: typewriter_ellipsis
     animationTrigger: 
   - text: '"I don''t get you Harper."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>continue</i>

@@ -15,15 +15,15 @@ MonoBehaviour:
   dialogueLines:
   - text: '"What is this? What''s the game plan here?"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Stop wasting my time with this pathetic performance."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Say something of value, or get the fuck out of my office."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>close</i>

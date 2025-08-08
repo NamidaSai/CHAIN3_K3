@@ -15,11 +15,11 @@ MonoBehaviour:
   dialogueLines:
   - text: <i>(5 minutes past 11.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(Judging by the streetlight outside, it must be PM.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   choices:
   - text: <i>close<i>

@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - text: '"..."'
     character: 1
-    soundID: 
+    soundID: typewriter_ellipsis
     animationTrigger: 
   choices:
   - text: '"This room... This is my office..."'

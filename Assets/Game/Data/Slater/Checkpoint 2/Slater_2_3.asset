@@ -15,12 +15,12 @@ MonoBehaviour:
   dialogueLines:
   - text: '"..."'
     character: 1
-    soundID: 
+    soundID: typewriter_ellipsis
     animationTrigger: 
   - text: '"I genuinely can''t tell if you''re pulling my leg or having a stroke
       right now, Harper."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>continue</i>

@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - text: '"So shut up. Or better yet, leave."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>close</i>

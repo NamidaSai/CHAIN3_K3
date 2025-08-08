@@ -15,23 +15,23 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Yes, we. We work together."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"You''ve been helping me gather intelligence for months."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"You knew what was next."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: <i>(This... This is the 'Vector' case...)</i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(Shit...)</i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   choices:
   - text: <i>close</i>

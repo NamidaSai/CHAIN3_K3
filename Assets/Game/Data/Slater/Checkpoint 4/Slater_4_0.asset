@@ -15,64 +15,64 @@ MonoBehaviour:
   dialogueLines:
   - text: <i>(I remember this. Operation 'Vector').<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(A terrorist group, coordinating shootings around the country.<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(Every time we got close to catching them, they'd vanish.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(But, I found their pattern. I knew exactly where and when the handler.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(All I had to do was wait for the attack to happen.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(Even if it lead to the death of 53 people.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(...)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_ellipsis
     animationTrigger: 
   - text: <i>(I caught my suspect, but it was useless. He was also a pawn.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(The real network stayed hidden.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(All those people - dead... For what? A handful of phone numbers and
       one arrest?)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(I convinced myself there was no other way. There probably was.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(Maybe my intel did help save lives.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(People continued to die anyway.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(I've got to live with that decision now.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: '"Oh god, please don''t tell me you''re gonna cry."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>close</i>

@@ -15,24 +15,24 @@ MonoBehaviour:
   dialogueLines:
   - text: <i>('When the Dust Settles', by Klaus Roth.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(A book on post-crisis moral evaluation.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(The book is heavily critical of moral absolutism.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(According to Roth, we judge decisions by standards that only work when
       nothing is at stake.)<i><i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(I've read this book more than a few times...)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   choices:
   - text: <i>close<i>

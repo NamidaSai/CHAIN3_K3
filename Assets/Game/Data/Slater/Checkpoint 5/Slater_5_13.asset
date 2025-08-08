@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Then get out of my office, and let me get back to work."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>continue</i>

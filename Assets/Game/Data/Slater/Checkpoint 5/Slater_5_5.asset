@@ -15,15 +15,15 @@ MonoBehaviour:
   dialogueLines:
   - text: '"You''re right Harper, I don''t know. Just like you don''t know."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"But I actually have the spine to make a hard decision."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"That''s the difference between us."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>continue</i>

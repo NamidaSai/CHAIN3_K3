@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - text: '"It seems I''m the only one who''s prepared to make a decision at all."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>continue</i>

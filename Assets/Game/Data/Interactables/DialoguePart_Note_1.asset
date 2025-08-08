@@ -15,15 +15,15 @@ MonoBehaviour:
   dialogueLines:
   - text: '<i>(''Pattern verified: 3rd Tuesday, high-traffic venue''.)<i>'
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(This feels familiar...)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(Is this my handwriting?)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   choices:
   - text: <i>close<i>

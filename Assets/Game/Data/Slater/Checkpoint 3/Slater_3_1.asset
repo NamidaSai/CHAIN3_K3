@@ -15,25 +15,25 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Good question."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"You called the meeting. What <b>are</b> we doing here, Harper?"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"We have an exceptional opportunity to dismantle one of the most dangerous
       terrorist groups - potentially in the world."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Don''t you think that - <b>maybe</b> - I''ve also thought about the horrendous
       act we are are about to allow?"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"It keeps me up at night."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: '"We?"'

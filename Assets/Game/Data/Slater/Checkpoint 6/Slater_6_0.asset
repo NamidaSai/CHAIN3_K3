@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Slater_6_0
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: ...
+  - text: '"..."'
     character: 1
-    soundID: 
+    soundID: typewriter_ellipsis
     animationTrigger: 
   - text: <i>(Looks like he's ignoring me. No use in trying to talk to myself anymore.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   choices:
   - text: <i>close</i>

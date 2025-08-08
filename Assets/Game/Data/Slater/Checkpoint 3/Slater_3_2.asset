@@ -15,38 +15,38 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Oh - now you''re my therapist?"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Of course I feel horrible. But we have no choice!"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"The attacker will only be picked up after an attack has happened."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"This is the first time we have ever had the opportunity to catch someone
       directly connected to this operation."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Let me be very clear: I know innocent people are going to die - I know
       that."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"But if we intervene now, their coms go dark, and we''re back where we
       started, just like the last 3 times."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: <i>(Shit... This is the 'Vector' case.)</i>
     character: 0
-    soundID: 
+    soundID: typewriter_me
     animationTrigger: 
   - text: '"We can make this the last time such an act is committed."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>(How was I such an idiot?)</i>
