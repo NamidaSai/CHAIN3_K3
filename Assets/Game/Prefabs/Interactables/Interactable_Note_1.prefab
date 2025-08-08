@@ -128,7 +128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 241782634822489235, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: interact_default
+      value: interact_paper
       objectReference: {fileID: 0}
     - target: {fileID: 241782634822489235, guid: 856f526523519fe47b3868d551dd12eb, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

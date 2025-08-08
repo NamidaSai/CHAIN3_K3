@@ -54,7 +54,7 @@ MonoBehaviour:
     stopOnPause: 0
     source: {fileID: 0}
   - name: K3_Checkpoint_4
-    clip: {fileID: 8300000, guid: 5f52c1737a21e534d8bc897e99bc9737, type: 3}
+    clip: {fileID: 8300000, guid: 535c6bc1b80efa84bbcb3ba9ce29bfd2, type: 3}
     volume: 0.5
     pitch: 1
     randomPitch: 0

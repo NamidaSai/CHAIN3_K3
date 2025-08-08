@@ -21,13 +21,13 @@ MonoBehaviour:
     character: 1
     soundID: typewriter_them
     animationTrigger: 
-  - text: '"We have an exceptional opportunity to dismantle one of the most dangerous
-      terrorist groups - potentially in the world."'
+  - text: '"We have an opportunity to help dismantle one of the most dangerous terrorist
+      groups in the world."'
     character: 1
     soundID: typewriter_them
     animationTrigger: 
   - text: '"Don''t you think that - <b>maybe</b> - I''ve also thought about the horrendous
-      act we are are about to allow?"'
+      act we are allowing?"'
     character: 1
     soundID: typewriter_them
     animationTrigger: 

@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetDoorId: J4
-  delay: 1
+  delay: 5
   onExit:
     m_PersistentCalls:
       m_Calls:

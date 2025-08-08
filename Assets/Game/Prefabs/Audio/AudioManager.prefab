@@ -48,7 +48,7 @@ MonoBehaviour:
   sounds:
   - name: ambient
     clip: {fileID: 8300000, guid: 3f60f95b4c4f9c74ab23a16e3497d619, type: 3}
-    volume: 0.4
+    volume: 0.3
     pitch: 1
     randomPitch: 0
     loop: 1
@@ -57,32 +57,32 @@ MonoBehaviour:
   - name: interact_default
     clip: {fileID: 8300000, guid: 0ef062ae8ebb9ed4f8e8036f91aee764, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 0.79
     randomPitch: 1
     loop: 0
     stopOnPause: 0
     source: {fileID: 0}
   - name: typewriter_them
     clip: {fileID: 8300000, guid: 6e809f78ae05a6e47bcb59c9e7512456, type: 3}
-    volume: 1
-    pitch: 0.71
+    volume: 0.4
+    pitch: 0.6
     randomPitch: 1
     loop: 0
     stopOnPause: 0
     source: {fileID: 0}
   - name: typewriter_thought
     clip: {fileID: 8300000, guid: 6e809f78ae05a6e47bcb59c9e7512456, type: 3}
-    volume: 1
-    pitch: 1
-    randomPitch: 1
+    volume: 0.3
+    pitch: 0.58
+    randomPitch: 0
     loop: 0
     stopOnPause: 0
     source: {fileID: 0}
   - name: typewriter_ellipsis
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 1
-    randomPitch: 1
+    clip: {fileID: 8300000, guid: 6e809f78ae05a6e47bcb59c9e7512456, type: 3}
+    volume: 0.2
+    pitch: 0.3
+    randomPitch: 0
     loop: 0
     stopOnPause: 0
     source: {fileID: 0}
@@ -96,9 +96,9 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: choice_clicked
     clip: {fileID: 0}
-    volume: 1
-    pitch: 1
-    randomPitch: 1
+    volume: 0.5
+    pitch: 0.2
+    randomPitch: 0
     loop: 0
     stopOnPause: 0
     source: {fileID: 0}
@@ -111,17 +111,33 @@ MonoBehaviour:
     stopOnPause: 0
     source: {fileID: 0}
   - name: enter
-    clip: {fileID: 0}
-    volume: 1
+    clip: {fileID: 8300000, guid: 9ac969ce689c9d541b634a7fafaabde3, type: 3}
+    volume: 0.7
     pitch: 1
     randomPitch: 0
     loop: 0
     stopOnPause: 0
     source: {fileID: 0}
   - name: exit
-    clip: {fileID: 0}
-    volume: 1
+    clip: {fileID: 8300000, guid: 9ad2c8db943e4d848bf1b60ff4cd6f4b, type: 3}
+    volume: 0.7
     pitch: 1
+    randomPitch: 0
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: interact_box
+    clip: {fileID: 8300000, guid: bddcc09cc7ad6604aa7d263fc29a9d90, type: 3}
+    volume: 1
+    pitch: 0.66
+    randomPitch: 0
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: interact_paper
+    clip: {fileID: 8300000, guid: 05ec61aa11c31744da52c3d70d9a61c7, type: 3}
+    volume: 1
+    pitch: 1.49
     randomPitch: 0
     loop: 0
     stopOnPause: 0

@@ -25,7 +25,8 @@ MonoBehaviour:
     character: 0
     soundID: typewriter_thought
     animationTrigger: 
-  - text: <i>(But, I found their pattern. I knew exactly where and when the handler.)<i>
+  - text: <i>(But, I found their pattern. I knew exactly where and when the handler
+      would appear.)<i>
     character: 0
     soundID: typewriter_thought
     animationTrigger: 
