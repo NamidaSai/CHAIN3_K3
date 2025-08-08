@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766673704853823467}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27034834, y: -0.65338486, z: 0.27034834, w: 0.65338486}
-  m_LocalPosition: {x: 1.7, y: 1.565, z: 0}
+  m_LocalRotation: {x: 0.17452452, y: -0.68523073, z: 0.17452453, w: 0.6852308}
+  m_LocalPosition: {x: 1.209, y: 1.722, z: -0.174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2497854428210452930}
-  m_LocalEulerAnglesHint: {x: 44.956, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 28.578, y: -90, z: 0}
 --- !u!114 &5071979759019182871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ Animator:
   m_GameObject: {fileID: 1413128571218199723}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 06e73cd2aaf59fd4bab2bce81a796ef8, type: 2}
+  m_Controller: {fileID: 9100000, guid: f616169a9f4afe7499b1052983b7937c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -155,6 +155,8 @@ GameObject:
   - component: {fileID: 2497854428210452930}
   - component: {fileID: 241782634822489235}
   - component: {fileID: 690482294649678070}
+  - component: {fileID: 4837381338457143162}
+  - component: {fileID: 1952454842701936324}
   m_Layer: 0
   m_Name: Interactable_BookGroup
   m_TagString: Interactable
@@ -195,7 +197,19 @@ MonoBehaviour:
   animationHandler: {fileID: 8674655824050642847}
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1952454842701936324}
+        m_TargetAssemblyTypeName: Game.Dialogue.DialogueTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &690482294649678070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -217,6 +231,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.49966574, y: 0.43410373, z: 0.52209854}
   m_Center: {x: -0.001811266, y: 1.0236717, z: -0.24468851}
+--- !u!114 &4837381338457143162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072046332402165521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea2ce4822bb41e2900913bc5a5a9dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePairs:
+  - dialogue: {fileID: 11400000, guid: c61bf8afb64f1e840bb703e0dd0e7f01, type: 2}
+    flag: 
+--- !u!114 &1952454842701936324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072046332402165521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade6078d718f4a2a80a8afcff4cc992a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDelay: 1
 --- !u!1 &9051370075657690072
 GameObject:
   m_ObjectHideFlags: 0
