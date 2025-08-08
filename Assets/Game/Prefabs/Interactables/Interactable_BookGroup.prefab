@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36670ccbf59ba9241a62e2f4e29dfd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSoundID: 
   interactCamera: {fileID: 5071979759019182871}
   animationHandler: {fileID: 8674655824050642847}
   onInteract:
@@ -242,8 +243,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.49966574, y: 0.43410373, z: 0.52209854}
-  m_Center: {x: -0.001811266, y: 1.0236717, z: -0.24468851}
+  m_Size: {x: 0.4996657, y: 0.43410364, z: 1.1612217}
+  m_Center: {x: -0.0018112676, y: 1.0236716, z: 0.07487376}
 --- !u!114 &4837381338457143162
 MonoBehaviour:
   m_ObjectHideFlags: 0
