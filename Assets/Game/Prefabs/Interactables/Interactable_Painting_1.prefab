@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 690482294649678070}
   - component: {fileID: 6670118271806881571}
   - component: {fileID: 6511181897171215129}
+  - component: {fileID: -2058614039267806343}
   m_Layer: 0
   m_Name: Interactable_Painting_1
   m_TagString: Interactable
@@ -210,6 +211,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -2058614039267806343}
+        m_TargetAssemblyTypeName: Game.Audio.AudioTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: interact_default
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &690482294649678070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -258,8 +271,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade6078d718f4a2a80a8afcff4cc992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRepeatable: 1
   spawnDelay: 1
+--- !u!114 &-2058614039267806343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072046332402165521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148b03a594cc43a98151d1d54b5d5f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7705266950193679861
 GameObject:
   m_ObjectHideFlags: 0

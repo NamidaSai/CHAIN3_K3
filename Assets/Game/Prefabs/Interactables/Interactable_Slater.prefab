@@ -304,7 +304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade6078d718f4a2a80a8afcff4cc992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRepeatable: 1
   spawnDelay: 1
 --- !u!1001 &6732431541219359736
 PrefabInstance:

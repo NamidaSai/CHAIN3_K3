@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 856542217682628296}
   - component: {fileID: 1168475483699881163}
   - component: {fileID: 7294539822100739152}
+  - component: {fileID: 2408605442001578970}
   m_Layer: 0
   m_Name: Interactable_Box_1
   m_TagString: Interactable
@@ -66,6 +67,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2408605442001578970}
+        m_TargetAssemblyTypeName: Game.Audio.AudioTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: interact_default
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &856542217682628296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85,8 +98,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.37837303, y: 0.2997055, z: 0.533294}
-  m_Center: {x: 0.0006074831, y: 0.12326914, z: -0.005893439}
+  m_Size: {x: 0.4959161, y: 0.14772147, z: 0.533294}
+  m_Center: {x: -0.05816402, y: 0.047277123, z: -0.005893439}
 --- !u!114 &1168475483699881163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,8 +127,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade6078d718f4a2a80a8afcff4cc992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRepeatable: 0
   spawnDelay: 1
+--- !u!114 &2408605442001578970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631779181300856856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148b03a594cc43a98151d1d54b5d5f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2686211765016429157
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a108da867a85d9748a0cf3a4495bd416, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0017277902
+      value: 0.00172779
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a108da867a85d9748a0cf3a4495bd416, type: 3}
       propertyPath: m_LocalPosition.y
