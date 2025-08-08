@@ -47,6 +47,6 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: <i>continue</i>
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: c09a72a10a655024589cab58db72fc54, type: 2}
     flagRequired: 
     flagToCreate: 

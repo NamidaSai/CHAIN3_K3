@@ -31,14 +31,14 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"You''re an idiot."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 557b0dc7cb5939d44b0bba9e91cb37de, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"You''re a psychopath."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 62cfd27f482d19a4782dd1863bbec121, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"Who gave you the right to decide who gets to live?"'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: bad778d8b977874448122f15dd1dfea6, type: 2}
     flagRequired: 
     flagToCreate: 

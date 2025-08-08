@@ -35,14 +35,14 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"You''re right. Sometimes good people have to make terrible choices."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: cd0240de21476ff40b475954ae2f4abe, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"I can''t watch you become this person."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: f78a2b1e2d8a3aa46a1dd0187f0226c0, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"No. I can''t pretend this is okay."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: f78a2b1e2d8a3aa46a1dd0187f0226c0, type: 2}
     flagRequired: 
     flagToCreate: 

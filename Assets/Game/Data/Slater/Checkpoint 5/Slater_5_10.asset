@@ -23,10 +23,10 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"Yes."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 32bda125b82e0c64a9a92449ba3ce260, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"No."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: a429c65b4fa1e244c9456b4c453bf4c3, type: 2}
     flagRequired: 
     flagToCreate: 

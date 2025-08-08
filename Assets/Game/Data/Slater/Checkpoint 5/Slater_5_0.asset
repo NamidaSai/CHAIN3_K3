@@ -23,14 +23,14 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"What if you''re wrong?"'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: ec633abba0592894eb97cad5580efa2b, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"Don''t go through with this, please."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: bebab03e31f8bf044ab9f91aab5f3b7b, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"Fine, I understand."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 809498ab939d4a54fbe9fcfe29b534a0, type: 2}
     flagRequired: 
     flagToCreate: 

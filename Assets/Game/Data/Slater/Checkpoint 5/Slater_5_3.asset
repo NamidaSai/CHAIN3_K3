@@ -35,14 +35,14 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"You don''t know that."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: b1e7e263d0229f34fa1476cf094c455f, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"That''s not the same thing."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 3e38bb5436477ef4bb59a3d9f95b6498, type: 2}
     flagRequired: 
     flagToCreate: 
   - text: '"Don''t put this on me."'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: c6f4319e41285ba4e86e26cfda3ba484, type: 2}
     flagRequired: 
     flagToCreate: 
