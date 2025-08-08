@@ -38,7 +38,7 @@ MonoBehaviour:
     nextPart: {fileID: 11400000, guid: 62cfd27f482d19a4782dd1863bbec121, type: 2}
     flagRequired: 
     flagToCreate: 
-  - text: '"Who gave you the right to decide who gets to live?"'
+  - text: '"Who gave you the right to decide who dies?"'
     nextPart: {fileID: 11400000, guid: bad778d8b977874448122f15dd1dfea6, type: 2}
     flagRequired: 
     flagToCreate: 
