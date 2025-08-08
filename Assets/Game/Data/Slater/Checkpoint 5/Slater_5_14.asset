@@ -25,12 +25,12 @@ MonoBehaviour:
   - text: '"So that''s it?"'
     nextPart: {fileID: 11400000, guid: 5520d2e630149a344bd11a7b21405da9, type: 2}
     flagRequired: 
-    flagToCreate: 
+    flagToCreate: K3_Checkpoint_5
   - text: '"You''re an asshole, Slater."'
     nextPart: {fileID: 11400000, guid: 5520d2e630149a344bd11a7b21405da9, type: 2}
     flagRequired: 
-    flagToCreate: 
+    flagToCreate: K3_Checkpoint_5
   - text: ...
     nextPart: {fileID: 11400000, guid: 5520d2e630149a344bd11a7b21405da9, type: 2}
     flagRequired: 
-    flagToCreate: 
+    flagToCreate: K3_Checkpoint_5

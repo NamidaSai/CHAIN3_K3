@@ -38,4 +38,4 @@ MonoBehaviour:
   - text: <i>continue</i>
     nextPart: {fileID: 11400000, guid: c09a72a10a655024589cab58db72fc54, type: 2}
     flagRequired: 
-    flagToCreate: 
+    flagToCreate: K3_Checkpoint_5
