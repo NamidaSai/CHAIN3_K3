@@ -15,15 +15,15 @@ MonoBehaviour:
   dialogueLines:
   - text: '"A criminal, apparently."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Or a monster, a sociopath..."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"A killer, maybe? You said that too, right?"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: '"No, really. Where am I?"'

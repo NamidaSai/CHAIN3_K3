@@ -15,11 +15,11 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Are you questioning my role?"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"You''re on thin fucking ice, Harper."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>continue</i>

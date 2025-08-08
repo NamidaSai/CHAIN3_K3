@@ -15,23 +15,23 @@ MonoBehaviour:
   dialogueLines:
   - text: '"And you''re an idiot."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"You don''t have a solution. No one does."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"We just keep letting them get away with it!"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: <i>(You're letting many innocent people die.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: '"Maybe I am a psychopath. So are you for allowing this to continue."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: '"You don''t know that."'

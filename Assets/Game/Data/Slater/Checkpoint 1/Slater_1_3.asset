@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Yes, unfortunately."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: '"Who are you?"'

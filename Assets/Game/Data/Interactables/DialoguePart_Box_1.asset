@@ -15,35 +15,35 @@ MonoBehaviour:
   dialogueLines:
   - text: <i>(What's in here?)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(...)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_ellipsis
     animationTrigger: 
   - text: <i>(Titled 'Carter Mall'.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(A floor plan...)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
-  - text: <i>There seems to be a bunch of numbers. Estimates...<i>
+  - text: <i>(There seems to be a bunch of numbers. Estimates...)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
-  - text: <i>These are... casualties.<i>
+  - text: <i>(These are... casualties.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
-  - text: <i>Casualty... estimates? At a mall?<i>
+  - text: <i>(Casualty... estimates? At a mall?)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
-  - text: <i>No... Surely not. It can't be what I think it is.<i>
+  - text: <i>(No... Surely not. It can't be what I think it is.)<i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   choices:
   - text: <i>close<i>

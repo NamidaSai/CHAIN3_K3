@@ -15,40 +15,40 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Ha! You have a dark sense of humour."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"So you do genuinely think you''ll replace me when I''m gone?"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Tell you what... If you want to be a real detective so desperately, take
       this as a lesson."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"We''re not superheroes. This job is about being effective."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"To defeat someone, you have to be more ruthless than them."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: <i>(...more ruthless than them...)</i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: <i>(...)</i>
     character: 0
-    soundID: 
+    soundID: typewriter_ellipsis
     animationTrigger: 
   - text: <i>(Am I talking to myself?)</i>
     character: 0
-    soundID: 
+    soundID: typewriter_thought
     animationTrigger: 
   - text: '"We didn''t get this far by being sentimental - Harper."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: '"Harper?"'

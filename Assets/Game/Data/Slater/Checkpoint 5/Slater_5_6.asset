@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Ah of course. Your inaction is far more virtuous."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>continue</i>

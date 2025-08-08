@@ -15,15 +15,15 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Wow. You''re actually starting to sound like me now."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Sure, get it out of your system. Then leave me alone."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Unless you decide to actually start acting like a detective - for once."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>close</i>

@@ -15,11 +15,11 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Maybe a more appropriate question is..."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   - text: '"Why are you still here?"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: '"What? I don''t understand."'

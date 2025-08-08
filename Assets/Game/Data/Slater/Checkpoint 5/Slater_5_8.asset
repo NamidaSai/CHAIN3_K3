@@ -16,7 +16,7 @@ MonoBehaviour:
   - text: ' "I don''t want to hear it Harper, we''ve been stuck in this loop for
       ages."'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>continue</i>

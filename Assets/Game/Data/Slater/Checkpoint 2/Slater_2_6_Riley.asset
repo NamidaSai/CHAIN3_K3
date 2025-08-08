@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - text: '"Oh, it''s no longer Jane, is it? Or do you prefer Ms Harper now?"'
     character: 1
-    soundID: 
+    soundID: typewriter_them
     animationTrigger: 
   choices:
   - text: <i>continue</i>
