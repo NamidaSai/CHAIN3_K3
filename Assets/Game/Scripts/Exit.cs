@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Game.Interact;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,6 +18,7 @@ namespace Game
         {
             if (_wasTriggered) { return; }
             _wasTriggered = true;
+            GetComponent<Interactable>().CanBeInteractedWith = false;
             StartCoroutine(ExitAfterDelay());
         }
 
