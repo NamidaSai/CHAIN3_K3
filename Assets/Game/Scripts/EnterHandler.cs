@@ -2,6 +2,7 @@
 using Game.Interact;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace Game
@@ -16,6 +17,8 @@ namespace Game
         private CinemachineBrain _brain;
         private CinemachineBlendDefinition _originalBlend;
         private Interactable _interactable;
+
+        public UnityEvent onEnter;
 
         private void Awake()
         {
@@ -43,6 +46,8 @@ namespace Game
             
             _brain.DefaultBlend = new CinemachineBlendDefinition(returnBlendStyle, returnBlendTime);
 
+            onEnter?.Invoke();
+            
             StartCoroutine(ReturnAfterDelay());
         }
 
