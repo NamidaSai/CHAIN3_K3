@@ -3,41 +3,69 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace Game.Dialogue
 {
     public class DialogueDisplay : MonoBehaviour
     {
+        [Header("UI")]
         [SerializeField] private Canvas canvas;
         [SerializeField] private TMP_Text characterDisplay;
         [SerializeField] private TMP_Text lineDisplay;
         [SerializeField] private RectTransform choiceContainer;
-        [SerializeField] private GameObject choicePrefab;
         [SerializeField] private CanvasGroup canvasGroup;
-        
+
+        [Header("Prefabs")]
+        [Tooltip("Prefab that contains a ChoiceDisplay component on the root.")]
+        [SerializeField] private ChoiceDisplay choiceDisplayPrefab;
+
+        [Header("Pooling")]
+        [Tooltip("Initial pool capacity. Not a hard limit.")]
+        [SerializeField] private int initialPoolCapacity = 4;
+        [Tooltip("Absolute max pooled instances. Extra are destroyed when released.")]
+        [SerializeField] private int maxPoolSize = 32;
+
+        [Header("Debug")]
         [SerializeField] private RectTransform debugContainer;
         [SerializeField] private TMP_Text debugDisplay;
         [SerializeField] private bool showDebug = true;
 
-        private readonly List<GameObject> _currentChoices = new();
+        private readonly List<ChoiceDisplay> _activeChoiceDisplays = new();
 
-        private float _startAnchoredY;
-        
+        private float _choiceContainerStartY;
         private const float TweenDuration = 0.5f;
+
+        private ObjectPool<ChoiceDisplay> _choiceDisplayPool;
 
         public void HandleTypewriterEnd()
         {
-            StartCoroutine(ShowChoicesAfterDelay());
+            StartCoroutine(RevealChoicesAfterDelay());
         }
 
-        private IEnumerator ShowChoicesAfterDelay()
+        private IEnumerator RevealChoicesAfterDelay()
         {
             yield return new WaitForSeconds(0.5f);
-            foreach (GameObject choice in _currentChoices)
+            foreach (ChoiceDisplay choiceDisplay in _activeChoiceDisplays)
             {
-                ChoiceDisplay choiceDisplay = choice.GetComponent<ChoiceDisplay>();
-                if (choiceDisplay) { choiceDisplay.Show(); }
+                if (choiceDisplay != null)
+                {
+                    choiceDisplay.Show();
+                }
             }
+        }
+
+        private void Awake()
+        {
+            _choiceDisplayPool = new ObjectPool<ChoiceDisplay>(
+                createFunc: CreateChoiceDisplayInstance,
+                actionOnGet: OnGetChoiceDisplay,
+                actionOnRelease: OnReleaseChoiceDisplay,
+                actionOnDestroy: OnDestroyChoiceDisplay,
+                collectionCheck: false,
+                defaultCapacity: initialPoolCapacity,
+                maxSize: maxPoolSize
+            );
         }
 
         // Dialogue System is initialised in Awake()
@@ -47,29 +75,37 @@ namespace Game.Dialogue
             DialogueSystem.Instance.onDisplayChoices.AddListener(HandleDisplayChoices);
             DialogueSystem.Instance.onDialogueStart.AddListener(HandleStartDialogue);
             DialogueSystem.Instance.onDialogueEnd.AddListener(HandleEndDialogue);
-            
+
             canvas.gameObject.SetActive(false);
-            _startAnchoredY = choiceContainer.anchoredPosition.y;
+            _choiceContainerStartY = choiceContainer.anchoredPosition.y;
             canvasGroup.alpha = 0f;
 
 #if !UNITY_EDITOR
-            debugContainer.gameObject.SetActive(false);
+            if (debugContainer != null) debugContainer.gameObject.SetActive(false);
 #endif
         }
 
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            debugContainer.gameObject.SetActive(showDebug);
+            if (debugContainer != null)
+            {
+                debugContainer.gameObject.SetActive(showDebug);
+            }
         }
 #endif
-        
+
         private void OnDestroy()
         {
-            DialogueSystem.Instance.onPlayLine.RemoveListener(HandlePlayLine);
-            DialogueSystem.Instance.onDisplayChoices.RemoveListener(HandleDisplayChoices);
-            DialogueSystem.Instance.onDialogueStart.RemoveListener(HandleStartDialogue);
-            DialogueSystem.Instance.onDialogueEnd.RemoveListener(HandleEndDialogue);
+            if (DialogueSystem.Instance != null)
+            {
+                DialogueSystem.Instance.onPlayLine.RemoveListener(HandlePlayLine);
+                DialogueSystem.Instance.onDisplayChoices.RemoveListener(HandleDisplayChoices);
+                DialogueSystem.Instance.onDialogueStart.RemoveListener(HandleStartDialogue);
+                DialogueSystem.Instance.onDialogueEnd.RemoveListener(HandleEndDialogue);
+            }
+
+            ReleaseAllActiveChoices();
         }
 
         private void HandleStartDialogue()
@@ -77,24 +113,27 @@ namespace Game.Dialogue
             if (!canvas.gameObject.activeSelf)
             {
                 canvas.gameObject.SetActive(true);
-                choiceContainer.anchoredPosition = new Vector2(choiceContainer.anchoredPosition.x, _startAnchoredY);
+                choiceContainer.anchoredPosition = new Vector2(choiceContainer.anchoredPosition.x, _choiceContainerStartY);
                 choiceContainer.DOAnchorPosY(10f, TweenDuration)
                     .From()
                     .SetEase(Ease.OutSine);
                 canvasGroup.DOFade(1f, TweenDuration);
             }
-            
+
 #if UNITY_EDITOR
-            debugDisplay.text = DialogueSystem.Instance.GetCurrentDialoguePart();
+            if (debugDisplay != null)
+            {
+                debugDisplay.text = DialogueSystem.Instance.GetCurrentDialoguePart();
+            }
 #endif
         }
 
         private void HandleEndDialogue()
         {
-            StartCoroutine(DisableAfterDelay());
+            StartCoroutine(FadeOutAndDisableAfterDelay());
         }
 
-        private IEnumerator DisableAfterDelay()
+        private IEnumerator FadeOutAndDisableAfterDelay()
         {
             choiceContainer.DOAnchorPosY(10f, TweenDuration)
                 .SetEase(Ease.OutSine);
@@ -103,36 +142,65 @@ namespace Game.Dialogue
             canvas.gameObject.SetActive(false);
         }
 
-        private void HandlePlayLine(DialogueLine lineToPlay)
+        private void HandlePlayLine(DialogueLine line)
         {
-            string characterName = lineToPlay.character.ToString().ToUpper();
-            characterDisplay.text = $"{characterName}";
-            lineDisplay.text = lineToPlay.text;
+            var characterName = line.character.ToString().ToUpperInvariant();
+            characterDisplay.text = characterName;
+            lineDisplay.text = line.text;
         }
 
-        private void HandleDisplayChoices(List<Choice> choicesToDisplay)
+        private void HandleDisplayChoices(List<Choice> choices)
         {
-            ClearCurrentChoices();
-            
-            foreach (Choice choice in choicesToDisplay)
+            ReleaseAllActiveChoices();
+
+            foreach (Choice choice in choices)
             {
-                GameObject newChoiceObject = Instantiate(choicePrefab, choiceContainer);
-                _currentChoices.Add(newChoiceObject);
-                ChoiceDisplay newChoiceDisplay = newChoiceObject.GetComponent<ChoiceDisplay>();
-                newChoiceDisplay.SetChoice(choice);
+                ChoiceDisplay choiceDisplay = _choiceDisplayPool.Get();
+                choiceDisplay.transform.SetParent(choiceContainer, false);
+                choiceDisplay.SetChoice(choice);
+                _activeChoiceDisplays.Add(choiceDisplay);
             }
         }
-        
-        private void ClearCurrentChoices()
+
+        private void ReleaseAllActiveChoices()
         {
-            if (_currentChoices.Count <= 0) { return; }
-            
-            foreach (GameObject choiceGameObject in _currentChoices)
+            if (_activeChoiceDisplays.Count == 0) return;
+
+            foreach (ChoiceDisplay choiceDisplay in _activeChoiceDisplays)
             {
-                Destroy(choiceGameObject);
+                if (choiceDisplay != null)
+                {
+                    _choiceDisplayPool.Release(choiceDisplay);
+                }
             }
 
-            _currentChoices.Clear();
+            _activeChoiceDisplays.Clear();
+        }
+
+        // Pool hooks
+        private ChoiceDisplay CreateChoiceDisplayInstance()
+        {
+            ChoiceDisplay instance = Instantiate(choiceDisplayPrefab, choiceContainer);
+            instance.gameObject.SetActive(false);
+            return instance;
+        }
+
+        private void OnGetChoiceDisplay(ChoiceDisplay choiceDisplay)
+        {
+            choiceDisplay.gameObject.SetActive(true);
+            choiceDisplay.PrepareForReuse();
+        }
+
+        private void OnReleaseChoiceDisplay(ChoiceDisplay choiceDisplay)
+        {
+            choiceDisplay.PrepareForReuse();
+            choiceDisplay.gameObject.SetActive(false);
+        }
+
+        private void OnDestroyChoiceDisplay(ChoiceDisplay choiceDisplay)
+        {
+            if (choiceDisplay == null) return;
+            Destroy(choiceDisplay.gameObject);
         }
     }
 }

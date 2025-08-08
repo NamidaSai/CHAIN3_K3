@@ -185,8 +185,10 @@ MonoBehaviour:
   characterDisplay: {fileID: 3475450062425276783}
   lineDisplay: {fileID: 7140940299332527547}
   choiceContainer: {fileID: 8253190741651476875}
-  choicePrefab: {fileID: 5005746147701995317, guid: aaeb0b9e1ea7d0b47b30221d2820d95e, type: 3}
   canvasGroup: {fileID: 2822447783980160881}
+  choiceDisplayPrefab: {fileID: 2782790110283188807, guid: aaeb0b9e1ea7d0b47b30221d2820d95e, type: 3}
+  initialPoolCapacity: 4
+  maxPoolSize: 32
   debugContainer: {fileID: 6982185935543459124}
   debugDisplay: {fileID: 6354483083343096768}
   showDebug: 1
