@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2765326708443442047}
   - component: {fileID: 2615564111810595871}
+  - component: {fileID: 4493609164404775428}
   m_Layer: 0
   m_Name: InteractSystem
   m_TagString: Untagged
@@ -51,10 +52,34 @@ MonoBehaviour:
       m_Calls: []
   onReturn:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4493609164404775428}
+        m_TargetAssemblyTypeName: Game.Audio.AudioTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: return
+          m_BoolArgument: 0
+        m_CallState: 2
   onHoverEnter:
     m_PersistentCalls:
       m_Calls: []
   onHoverExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4493609164404775428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9047577591030986668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148b03a594cc43a98151d1d54b5d5f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
