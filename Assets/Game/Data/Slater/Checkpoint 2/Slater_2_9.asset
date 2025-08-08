@@ -27,6 +27,6 @@ MonoBehaviour:
     animationTrigger: 
   choices:
   - text: '"Slater?"'
-    nextPart: {fileID: 0}
+    nextPart: {fileID: 11400000, guid: 0d74671809cd10f43b1f0821585c66b5, type: 2}
     flagRequired: K3_Progress_2
     flagToCreate: 
