@@ -29,7 +29,11 @@ MonoBehaviour:
     character: 0
     soundID: 
     animationTrigger: 
-  - text: <i>(Is this... Am I... Jane?)</i>
+  - text: <i>(Is this... Am I Jane right now?)</i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: <i>(My voice does feel different, now that I think about it.)</i>
     character: 0
     soundID: 
     animationTrigger: 

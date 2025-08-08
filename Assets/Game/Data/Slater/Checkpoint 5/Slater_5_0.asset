@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slater_5_0
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: (That really is me...)
+  - text: <i>(That really is me...)<i>
     character: 0
     soundID: 
     animationTrigger: 

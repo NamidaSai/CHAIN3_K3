@@ -30,7 +30,7 @@ MonoBehaviour:
     character: 1
     soundID: 
     animationTrigger: 
-  - text: You're too much of a coward to make a hard decision."
+  - text: '"You''re too much of a coward to make a hard decision."'
     character: 1
     soundID: 
     animationTrigger: 

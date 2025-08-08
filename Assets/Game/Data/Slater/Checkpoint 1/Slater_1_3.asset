@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slater_1_3
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: '"Unfortunately, I still can."'
+  - text: '"Yes, unfortunately."'
     character: 1
     soundID: 
     animationTrigger: 

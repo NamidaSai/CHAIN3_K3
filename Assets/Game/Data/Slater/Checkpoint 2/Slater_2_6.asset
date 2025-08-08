@@ -21,8 +21,8 @@ MonoBehaviour:
     character: 1
     soundID: 
     animationTrigger: 
-  - text: '"Tell you what Harper... If you want to be a real detective so desperately,
-      take this as a lesson."'
+  - text: '"Tell you what... If you want to be a real detective so desperately, take
+      this as a lesson."'
     character: 1
     soundID: 
     animationTrigger: 

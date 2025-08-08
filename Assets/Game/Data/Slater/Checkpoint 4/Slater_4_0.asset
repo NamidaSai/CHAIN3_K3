@@ -13,10 +13,6 @@ MonoBehaviour:
   m_Name: Slater_4_0
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: <i>Slater explains the case, his position, how he now regrets it...</i>
-    character: 1
-    soundID: 
-    animationTrigger: 
   - text: <i>(I remember this. Operation 'Vector').<i>
     character: 0
     soundID: 
@@ -75,10 +71,6 @@ MonoBehaviour:
     soundID: 
     animationTrigger: 
   - text: '"Oh god, please don''t tell me you''re gonna cry."'
-    character: 1
-    soundID: 
-    animationTrigger: 
-  - text: '"It''s not going to make me feel worse. I think that''s genuinely impossible."'
     character: 1
     soundID: 
     animationTrigger: 

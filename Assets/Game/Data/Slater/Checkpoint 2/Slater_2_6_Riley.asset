@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slater_2_6_Riley
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: '"Oh, it''s no longer Jane, is it. Or do you prefer Ms Harper now?"'
+  - text: '"Oh, it''s no longer Jane, is it? Or do you prefer Ms Harper now?"'
     character: 1
     soundID: 
     animationTrigger: 

@@ -13,12 +13,8 @@ MonoBehaviour:
   m_Name: Slater_1_0
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: <i>The man stares out the window. </i>
-    character: 1
-    soundID: 
-    animationTrigger: 
-  - text: <i>He is not acknowledging your presence.</i>
-    character: 1
+  - text: <i>(Who is that?)</i>
+    character: 0
     soundID: 
     animationTrigger: 
   choices:

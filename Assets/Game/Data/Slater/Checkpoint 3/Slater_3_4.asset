@@ -17,11 +17,11 @@ MonoBehaviour:
     character: 1
     soundID: 
     animationTrigger: 
-  - text: '"You''ve been helping me gather intelligence for months.'
+  - text: '"You''ve been helping me gather intelligence for months."'
     character: 1
     soundID: 
     animationTrigger: 
-  - text: '"You knew this was the next step."'
+  - text: '"You knew what was next."'
     character: 1
     soundID: 
     animationTrigger: 

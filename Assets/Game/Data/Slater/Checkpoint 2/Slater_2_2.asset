@@ -17,11 +17,8 @@ MonoBehaviour:
     character: 1
     soundID: 
     animationTrigger: 
-  - text: '"I''ve had to deal with other pompous,"'
-    character: 1
-    soundID: 
-    animationTrigger: 
-  - text: '"moralistic bootlickers before you, Harper."'
+  - text: '"I''ve had to deal with other pompous, moralistic bootlickers before you,
+      Harper.""'
     character: 1
     soundID: 
     animationTrigger: 

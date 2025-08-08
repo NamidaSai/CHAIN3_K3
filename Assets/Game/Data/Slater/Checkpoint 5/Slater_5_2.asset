@@ -17,7 +17,7 @@ MonoBehaviour:
     character: 1
     soundID: 
     animationTrigger: 
-  - text: '"And you think you were picked for your brain?"'
+  - text: '"And you think <b>you<b> were picked for your brain?"'
     character: 1
     soundID: 
     animationTrigger: 
@@ -41,7 +41,7 @@ MonoBehaviour:
     character: 1
     soundID: 
     animationTrigger: 
-  - text: '"Jesus, I was an asshole."'
+  - text: <i>(Jesus, I'm being an asshole.)<i>
     character: 0
     soundID: 
     animationTrigger: 

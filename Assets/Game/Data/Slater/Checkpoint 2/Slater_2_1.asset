@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slater_2_1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: '"And who are <b>you</b> to question my role?"'
+  - text: '"Are you questioning my role?"'
     character: 1
     soundID: 
     animationTrigger: 
