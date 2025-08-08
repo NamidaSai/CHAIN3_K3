@@ -70,7 +70,15 @@ MonoBehaviour:
     loop: 0
     stopOnPause: 0
     source: {fileID: 0}
-  - name: typewriter_me
+  - name: typerwriter_thought
+    clip: {fileID: 8300000, guid: 6e809f78ae05a6e47bcb59c9e7512456, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitch: 1
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: typewriter_ellipsis
     clip: {fileID: 0}
     volume: 1
     pitch: 1
@@ -78,8 +86,16 @@ MonoBehaviour:
     loop: 0
     stopOnPause: 0
     source: {fileID: 0}
-  - name: typerwriter_thought
-    clip: {fileID: 8300000, guid: 6e809f78ae05a6e47bcb59c9e7512456, type: 3}
+  - name: return
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    randomPitch: 1
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: choice_clicked
+    clip: {fileID: 0}
     volume: 1
     pitch: 1
     randomPitch: 1
