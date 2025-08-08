@@ -27,6 +27,12 @@ namespace Game.Dialogue
 
         public void HandleTypewriterEnd()
         {
+            StartCoroutine(ShowChoicesAfterDelay());
+        }
+
+        private IEnumerator ShowChoicesAfterDelay()
+        {
+            yield return new WaitForSeconds(0.5f);
             foreach (GameObject choice in _currentChoices)
             {
                 ChoiceDisplay choiceDisplay = choice.GetComponent<ChoiceDisplay>();
