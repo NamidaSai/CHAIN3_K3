@@ -6,6 +6,7 @@ namespace Game.Interact
 {
     public class Interactable : MonoBehaviour
     {
+        [SerializeField] private string hoverSoundID;
         [SerializeField] private CinemachineCamera interactCamera;
         [SerializeField] private AnimationHandler animationHandler;
 
@@ -89,6 +90,11 @@ namespace Game.Interact
 
             animationHandler?.SetTrigger("default");
             _isInteracted = false;
+        }
+
+        public string GetHoverSoundID()
+        {
+            return hoverSoundID;
         }
     }
 }
