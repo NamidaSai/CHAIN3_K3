@@ -58,7 +58,7 @@ namespace Game.Dialogue
             Debug.Log($"{nameof(DialogueSystem)}.{nameof(StartDialogue)} called.");
 #endif
             _currentDialogue = dialoguePart;
-            _currentLineIndex = 0;
+            _currentLineIndex = -1;
             
             onDialogueStart?.Invoke();
             
@@ -75,6 +75,7 @@ namespace Game.Dialogue
 
             if (_currentLineIndex < _currentDialogue.dialogueLines.Count)
             {
+                _currentLineIndex++;
                 PlayNextDialogueLine();
                 return;
             }
@@ -100,14 +101,13 @@ namespace Game.Dialogue
 #endif           
             
             onPlayLine?.Invoke(lineToPlay);
-            _currentLineIndex++;
 
             DisplayChoices();
         }
 
         private void DisplayChoices()
         {
-            bool isLastLine = _currentLineIndex == _currentDialogue.dialogueLines.Count;
+            bool isLastLine = _currentLineIndex + 1 >= _currentDialogue.dialogueLines.Count;
             if (!isLastLine)
             {
                 onDisplayChoices?.Invoke(new List<Choice> { continueChoice });
@@ -141,5 +141,10 @@ namespace Game.Dialogue
             return _currentDialogue?.name;
         }
 #endif
+        public string GetCurrentSoundID()
+        {
+            if (_currentLineIndex >= _currentDialogue.dialogueLines.Count) { return null; }
+            return _currentDialogue.dialogueLines[_currentLineIndex].soundID;
+        }
     }
 }

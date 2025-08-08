@@ -6,6 +6,7 @@ namespace Game.Audio
     {
         public void Trigger(string soundName)
         {
+            if (string.IsNullOrEmpty(soundName)) { return; }
             AudioManager.Instance.Play(soundName);
         }
     }
