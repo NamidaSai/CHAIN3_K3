@@ -2,6 +2,6 @@
 
 Design, Art & Narrative by Luc Foster
 
-Coding, UX & Production by Geoffrey Mugford
+Code, UX & Production by Geoffrey Mugford
 
 Music by Kyle Misko
