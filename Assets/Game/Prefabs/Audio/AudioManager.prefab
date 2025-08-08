@@ -103,8 +103,8 @@ MonoBehaviour:
     stopOnPause: 0
     source: {fileID: 0}
   - name: hover_default
-    clip: {fileID: 0}
-    volume: 1
+    clip: {fileID: 8300000, guid: 22093e672f246f74586da61eb367844c, type: 3}
+    volume: 0.778
     pitch: 1
     randomPitch: 1
     loop: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: exit
     clip: {fileID: 8300000, guid: 9ad2c8db943e4d848bf1b60ff4cd6f4b, type: 3}
-    volume: 0.7
+    volume: 0.5
     pitch: 1
     randomPitch: 0
     loop: 0
