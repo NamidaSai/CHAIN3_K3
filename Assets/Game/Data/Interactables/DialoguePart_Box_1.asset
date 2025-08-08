@@ -49,4 +49,4 @@ MonoBehaviour:
   - text: <i>close<i>
     nextPart: {fileID: 0}
     flagRequired: 
-    flagToCreate: K3_Progress_3
+    flagToCreate: K3_Progress_2

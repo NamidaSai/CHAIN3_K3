@@ -28,9 +28,5 @@ MonoBehaviour:
   choices:
   - text: '"Slater?"'
     nextPart: {fileID: 11400000, guid: 0d74671809cd10f43b1f0821585c66b5, type: 2}
-    flagRequired: K3_Progress_2
-    flagToCreate: 
-  - text: <i>close<i>
-    nextPart: {fileID: 0}
     flagRequired: 
-    flagToCreate: K3_Progress_2
+    flagToCreate: 
