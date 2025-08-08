@@ -70,7 +70,7 @@ MonoBehaviour:
     loop: 0
     stopOnPause: 0
     source: {fileID: 0}
-  - name: typerwriter_thought
+  - name: typewriter_thought
     clip: {fileID: 8300000, guid: 6e809f78ae05a6e47bcb59c9e7512456, type: 3}
     volume: 1
     pitch: 1
