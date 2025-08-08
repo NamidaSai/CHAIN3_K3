@@ -29,7 +29,8 @@ namespace Game.Dialogue
         {
             foreach (GameObject choice in _currentChoices)
             {
-                choice.GetComponent<ChoiceDisplay>().Show();
+                ChoiceDisplay choiceDisplay = choice.GetComponent<ChoiceDisplay>();
+                if (choiceDisplay) { choiceDisplay.Show(); }
             }
         }
 
