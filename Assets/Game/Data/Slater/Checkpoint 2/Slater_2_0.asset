@@ -13,10 +13,6 @@ MonoBehaviour:
   m_Name: Slater_2_0
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: '"This room... This is my office..."'
-    character: 0
-    soundID: 
-    animationTrigger: 
   - text: '"Is that a threat? You''re coming for my title too?"'
     character: 1
     soundID: 

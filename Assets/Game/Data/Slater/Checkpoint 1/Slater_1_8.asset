@@ -17,4 +17,8 @@ MonoBehaviour:
     character: 1
     soundID: 
     animationTrigger: 
-  choices: []
+  choices:
+  - text: '"This room... This is my office..."'
+    nextPart: {fileID: 11400000, guid: 1a5da51d3ad869a459f2daba310266c5, type: 2}
+    flagRequired: 
+    flagToCreate: K3_Progress_1
