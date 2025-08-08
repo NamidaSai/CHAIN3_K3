@@ -61,6 +61,38 @@ PrefabInstance:
       propertyPath: targetDoorId
       value: L4
       objectReference: {fileID: 0}
+    - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onExit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onExit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2953434247766675279}
+    - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onExit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onExit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onExit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Game.Audio.AudioTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onExit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1152197063084198278, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onExit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2279467259692320838, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
       propertyPath: DoorID
       value: L4
@@ -117,6 +149,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2996417739986674775, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996417739986674775, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996417739986674775, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2953434247766675279}
+    - target: {fileID: 2996417739986674775, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996417739986674775, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996417739986674775, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Game.Audio.AudioTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996417739986674775, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: enter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996417739986674775, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4736286111211417786, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
       propertyPath: dialoguePairs.Array.data[0].dialogue
       value: 
@@ -138,3 +202,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2648135220304321997, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
   m_PrefabInstance: {fileID: 4073615006492575090}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2953434247766675279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1185809611356883517, guid: 3bdf011fdd0103440887d5fb4752ed48, type: 3}
+  m_PrefabInstance: {fileID: 4073615006492575090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148b03a594cc43a98151d1d54b5d5f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -110,3 +110,19 @@ MonoBehaviour:
     loop: 0
     stopOnPause: 0
     source: {fileID: 0}
+  - name: enter
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    randomPitch: 0
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: exit
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    randomPitch: 0
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}
