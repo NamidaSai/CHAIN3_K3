@@ -1,4 +1,5 @@
-﻿using Game.Dialogue;
+﻿using DG.Tweening;
+using Game.Dialogue;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +13,8 @@ namespace Game.Interact
         
         [SerializeField] private CinemachineCamera primaryCamera;
         [SerializeField] private float maxInteractDistance = 5f;
+        [SerializeField] private CanvasGroup returnCanvas;
+        [SerializeField] private RectTransform returnRect;
         
         public bool CanInteract { private get; set; } = true;
 
@@ -25,12 +28,18 @@ namespace Game.Interact
         public UnityEvent<Interactable> onHoverExit;
 
         private Interactable _currentHovered;
+
+        private float _startReturnAnchoredY;
         
         public void Return()
         {
             onReturn?.Invoke(this);
             DialogueSystem.Instance.EndDialogue();
             primaryCamera.gameObject.SetActive(true);
+            
+            returnCanvas.DOFade(0f, 0.5f);
+            returnRect.DOAnchorPosY(10f, 0.5f)
+                .SetEase(Ease.OutSine);
         }
 
         private void Awake()
@@ -62,6 +71,9 @@ namespace Game.Interact
             
             DialogueSystem.Instance.onDialogueStart.AddListener(HandleDialogueStart);
             DialogueSystem.Instance.onDialogueEnd.AddListener(HandleDialogueEnd);
+
+            returnCanvas.alpha = 0f;
+            _startReturnAnchoredY = returnRect.anchoredPosition.y;
         }
 
         private void OnDestroy()
@@ -131,6 +143,12 @@ namespace Game.Interact
             onInteract?.Invoke(this);
             target.Interact(this);
             primaryCamera.gameObject.SetActive(false);
+            
+            returnCanvas.DOFade(1f, 0.5f);
+            returnRect.anchoredPosition = new Vector2(returnRect.anchoredPosition.x, _startReturnAnchoredY);
+            returnRect.DOAnchorPosY(10f, 0.5f)
+                .From()
+                .SetEase(Ease.OutSine);
         }
 
         private Interactable GetInteractableUnderCursor()

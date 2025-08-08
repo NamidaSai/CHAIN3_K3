@@ -114,7 +114,7 @@ namespace Game.Dialogue
             {
                 canvas.gameObject.SetActive(true);
                 choiceContainer.anchoredPosition = new Vector2(choiceContainer.anchoredPosition.x, _choiceContainerStartY);
-                choiceContainer.DOAnchorPosY(10f, TweenDuration)
+                choiceContainer.DOAnchorPosY(_choiceContainerStartY + 50f, TweenDuration)
                     .From()
                     .SetEase(Ease.OutSine);
                 canvasGroup.DOFade(1f, TweenDuration);
@@ -135,7 +135,7 @@ namespace Game.Dialogue
 
         private IEnumerator FadeOutAndDisableAfterDelay()
         {
-            choiceContainer.DOAnchorPosY(10f, TweenDuration)
+            choiceContainer.DOAnchorPosY(_choiceContainerStartY + 50f, TweenDuration)
                 .SetEase(Ease.OutSine);
             canvasGroup.DOFade(0f, TweenDuration);
             yield return new WaitForSeconds(TweenDuration);
