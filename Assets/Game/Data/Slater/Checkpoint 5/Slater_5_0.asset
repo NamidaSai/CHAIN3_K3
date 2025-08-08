@@ -21,4 +21,16 @@ MonoBehaviour:
     character: 1
     soundID: 
     animationTrigger: 
-  choices: []
+  choices:
+  - text: '"What if you''re wrong?"'
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: 
+  - text: '"Don''t go through with this, please."'
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: 
+  - text: '"Fine, I understand."'
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: 

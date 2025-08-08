@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8f9465ac184801b114af67a47ea777, type: 3}
+  m_Name: Slater_5_7
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: '"Then leave. I''ll carry the weight."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: '"There isn''t a version of this scenario where everyone''s hands stay
+      clean."'
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: <i>(I was obsessed with an objective answer...)<i>
+    character: 0
+    soundID: 
+    animationTrigger: 
+  - text: '"You''ll spend your life being an assistant" '
+    character: 1
+    soundID: 
+    animationTrigger: 
+  - text: You're too much of a coward to make a hard decision."
+    character: 1
+    soundID: 
+    animationTrigger: 
+  choices:
+  - text: <i>continue</i>
+    nextPart: {fileID: 0}
+    flagRequired: 
+    flagToCreate: 

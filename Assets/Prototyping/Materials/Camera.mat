@@ -69,7 +69,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints:
     - _ColorBitDepth: 64
-    - _ResolutionLimit: 64
+    - _ResolutionLimit: 178
     - _SnapsPerUnit: 64
     m_Floats:
     - _AffineTextureStrength: 0

@@ -53,31 +53,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5148064131400059781, guid: 026ac9b23f1b1ec4b8edd1fff3677c3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.326
       objectReference: {fileID: 0}
     - target: {fileID: 5148064131400059781, guid: 026ac9b23f1b1ec4b8edd1fff3677c3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.68
+      value: 1.707
       objectReference: {fileID: 0}
     - target: {fileID: 5148064131400059781, guid: 026ac9b23f1b1ec4b8edd1fff3677c3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.346
       objectReference: {fileID: 0}
     - target: {fileID: 5148064131400059781, guid: 026ac9b23f1b1ec4b8edd1fff3677c3f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9901611
+      value: 0.9866296
       objectReference: {fileID: 0}
     - target: {fileID: 5148064131400059781, guid: 026ac9b23f1b1ec4b8edd1fff3677c3f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1399321
+      value: 0.09685985
       objectReference: {fileID: 0}
     - target: {fileID: 5148064131400059781, guid: 026ac9b23f1b1ec4b8edd1fff3677c3f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.12888657
       objectReference: {fileID: 0}
     - target: {fileID: 5148064131400059781, guid: 026ac9b23f1b1ec4b8edd1fff3677c3f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.023843346
       objectReference: {fileID: 0}
     - target: {fileID: 5148064131400059781, guid: 026ac9b23f1b1ec4b8edd1fff3677c3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -542,47 +542,47 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2243444463388496992, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_Name
-      value: CinemachineCamera
+      value: CinemachineCamera_Main
       objectReference: {fileID: 0}
     - target: {fileID: 3470369115988258494, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.326
       objectReference: {fileID: 0}
     - target: {fileID: 3470369115988258494, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.68
+      value: 1.707
       objectReference: {fileID: 0}
     - target: {fileID: 3470369115988258494, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.346
       objectReference: {fileID: 0}
     - target: {fileID: 3470369115988258494, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9901611
+      value: 0.9866296
       objectReference: {fileID: 0}
     - target: {fileID: 3470369115988258494, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1399321
+      value: 0.09685985
       objectReference: {fileID: 0}
     - target: {fileID: 3470369115988258494, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.12888657
       objectReference: {fileID: 0}
     - target: {fileID: 3470369115988258494, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.023843346
       objectReference: {fileID: 0}
     - target: {fileID: 3470369115988258494, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 16.088
+      value: 11.378
       objectReference: {fileID: 0}
     - target: {fileID: 3470369115988258494, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -14.757
       objectReference: {fileID: 0}
     - target: {fileID: 3470369115988258494, guid: 8a24ada69257e0e419b73d6b20affacc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 1.291
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
