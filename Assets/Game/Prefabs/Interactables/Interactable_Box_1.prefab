@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36670ccbf59ba9241a62e2f4e29dfd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSoundID: 
+  hoverSoundID: hover_default
   interactCamera: {fileID: 269911857093108306}
   animationHandler: {fileID: 4184293192127351242}
   onInteract:
